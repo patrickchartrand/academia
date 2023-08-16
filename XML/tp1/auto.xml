@@ -1,0 +1,275 @@
+<!-- PATRICK CHARTRAND (20017273) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE automobiles SYSTEM "auto.dtd">
+<automobiles>
+    <automobile>
+        <fabricant>Ford</fabricant>
+        <modele>Focus</modele>
+        <options>
+            <option>
+                <codeOpt num="auto1_27A">27A</codeOpt>
+                <prixOpt>800 $</prixOpt>
+                <description>vitres électriques et sièges électriques 8 positions</description>
+            </option>
+            <option>
+                <codeOpt num="auto1_27F">27F</codeOpt>
+                <prixOpt>1200 $</prixOpt>
+                <description>roues magnésium et toit ouvrant</description>
+            </option>
+            <option>
+                <codeOpt num="auto1_26B">26B</codeOpt>
+                <prixOpt>400 $</prixOpt>
+                <description>groupe éclairage de luxe</description>
+            </option>
+        </options>
+        <sous-modeles>
+            <caracteristiques>
+                <sous-modele>LS</sous-modele>
+                <nbPortes>4 portes</nbPortes>
+                <listeCouleurs>
+                    <couleur>blanc</couleur>
+                    <couleur>noir</couleur>
+                    <couleur>rouge</couleur>
+                    <couleur>bleu</couleur>
+                </listeCouleurs>
+                <prixBase>19 995 $</prixBase>
+                <listeCodes>
+                    <code numRef="auto1_27A">27A</code>
+                    <code numRef="auto1_27F">27F</code>
+                </listeCodes>
+                <moteurs>
+                    <moteur>
+                        <nbCylindres>4 cyl.</nbCylindres>
+                        <deplacement unite="litres">1,8</deplacement>
+                        <puissance unite="chevaux">105</puissance>
+                        <gaz type="ordinaire" />
+                        <prixSupp />
+                    </moteur>
+                    <moteur>
+                        <nbCylindres>6 cyl.</nbCylindres>
+                        <deplacement unite="litres">2,8</deplacement>
+                        <puissance unite="chevaux">145 chevaux</puissance>
+                        <gaz type="super" />
+                        <prixSupp>1300 $</prixSupp>
+                    </moteur>
+                </moteurs>
+            </caracteristiques>
+            <caracteristiques>
+                <sous-modele>EX</sous-modele>
+                <nbPortes>5 portes</nbPortes>
+                <listeCouleurs>
+                    <couleur>blanc</couleur>
+                    <couleur>noir</couleur>
+                    <couleur>rouge</couleur>
+                    <couleur>bleu</couleur>
+                </listeCouleurs>
+                <prixBase>21 995 $</prixBase>
+                <listeCodes>
+                    <code numRef="auto1_27A">27A</code>
+                    <code numRef="auto1_27F">27F</code>
+                    <code numRef="auto1_26B">26B</code>                    
+                </listeCodes>
+                <moteurs>
+                    <moteur>
+                        <nbCylindres>4 cyl.</nbCylindres>
+                        <deplacement unite="litres">1,8</deplacement>
+                        <puissance unite="chevaux">105</puissance>
+                        <gaz type="ordinaire" />
+                        <prixSupp />
+                    </moteur>
+                    <moteur>
+                        <nbCylindres>6 cyl.</nbCylindres>
+                        <deplacement unite="litres">2,8</deplacement>
+                        <puissance unite="chevaux">145</puissance>
+                        <gaz type="super" />
+                        <prixSupp>1300 $</prixSupp>
+                    </moteur>
+                </moteurs>
+            </caracteristiques>
+            <caracteristiques>
+                <sous-modele>GS</sous-modele>
+                <nbPortes>5 portes</nbPortes>
+                <listeCouleurs>
+                    <couleur>noir</couleur>
+                    <couleur>rouge</couleur>
+                </listeCouleurs>
+                <prixBase>28 995 $</prixBase>
+                <listeCodes>
+                    <code />
+                </listeCodes>
+                <moteurs>
+                    <moteur>
+                        <nbCylindres>6 cyl.</nbCylindres>
+                        <deplacement unite="litres">2,8</deplacement>
+                        <puissance unite="chevaux">145</puissance>
+                        <gaz type="super" />
+                        <prixSupp />
+                    </moteur>
+                    <moteur>
+                        <nbCylindres>6 cyl.</nbCylindres>                        
+                        <deplacement unite="litres">3,7</deplacement>
+                        <puissance unite="chevaux">250</puissance>
+                        <gaz type="super" />
+                        <prixSupp>2400 $</prixSupp>
+                    </moteur>
+                </moteurs>
+            </caracteristiques>
+        </sous-modeles>
+    </automobile>
+    <automobile>
+        <fabricant>VW</fabricant>
+        <modele>Jetta</modele>
+        <options>
+            <option>
+                <codeOpt num="auto2_27A">27A</codeOpt>
+                <prixOpt>1800 $</prixOpt>
+                <description>air climatisé et sièges chauffants</description>
+            </option>
+            <option>
+                <codeOpt num="auto2_27F">27F</codeOpt>
+                <prixOpt>1200 $</prixOpt>
+                <description>roues magnésium et toit ouvrant</description>
+            </option>
+            <option>
+                <codeOpt num="auto2_26B">26B</codeOpt>
+                <prixOpt>400 $;</prixOpt>
+                <description>groupe éclairage de luxe</description>
+            </option>
+        </options>
+        <sous-modeles>
+            <caracteristiques>
+                <sous-modele>GS</sous-modele>
+                <nbPortes>4 portes</nbPortes>
+                <listeCouleurs>
+                    <couleur>blanc</couleur>
+                    <couleur>noir</couleur>
+                    <couleur>rouge</couleur>
+                    <couleur>bleu</couleur>
+                </listeCouleurs>
+                <prixBase>21 995 $</prixBase>
+                <listeCodes>
+                    <code numRef="auto2_27A">27A</code>
+                    <code numRef="auto2_27F">27F</code>
+                </listeCodes>
+                <moteurs>
+                    <moteur>
+                        <nbCylindres>4 cyl.</nbCylindres>
+                        <deplacement unite="litres">1,8</deplacement>
+                        <puissance unite="chevaux">105</puissance>
+                        <gaz type="ordinaire" />
+                        <prixSupp />
+                    </moteur>
+                    <moteur>
+                        <nbCylindres>4 cyl.</nbCylindres>
+                        <deplacement unite="litres" mecanique="turbo">1,7</deplacement>
+                        <puissance unite="chevaux">170</puissance>
+                        <gaz type="super" />
+                        <prixSupp>2350 $</prixSupp>
+                    </moteur>
+                    <moteur>
+                        <nbCylindres>4 cyl.</nbCylindres>
+                        <deplacement unite="litres">1,9</deplacement>
+                        <puissance unite="chevaux">110</puissance>
+                        <gaz type="diesel" />
+                        <prixSupp>1800 $</prixSupp>
+                    </moteur>
+                    <moteur>
+                        <nbCylindres>6 cyl.</nbCylindres>
+                        <deplacement unite="litres">2,8</deplacement>
+                        <puissance unite="chevaux">245</puissance>
+                        <gaz type="super" />
+                        <prixSupp>4300 $</prixSupp>
+                    </moteur>
+                </moteurs>
+            </caracteristiques>
+            <caracteristiques>
+                <sous-modele>GX</sous-modele>
+                <nbPortes>4 portes</nbPortes>
+                <listeCouleurs>
+                    <couleur>blanc</couleur>
+                    <couleur>noir</couleur>
+                    <couleur>rouge</couleur>
+                    <couleur>bleu</couleur>
+                </listeCouleurs>
+                <prixBase>21 995 $</prixBase>
+                <listeCodes>
+                    <code numRef="auto2_27A">27A</code>
+                    <code numRef="auto2_27F">27F</code>
+                    <code numRef="auto2_26B">26B</code>
+                </listeCodes>
+                <moteurs>
+                    <moteur>
+                        <nbCylindres>4 cyl.</nbCylindres>
+                        <deplacement unite="litres">1,8</deplacement>
+                        <puissance unite="chevaux">105</puissance>
+                        <gaz type="ordinaire" />
+                        <prixSupp />
+                    </moteur>
+                    <moteur>
+                        <nbCylindres>4 cyl.</nbCylindres>
+                        <deplacement unite="litres" mecanique="turbo">1,7</deplacement>
+                        <puissance unite="chevaux">170</puissance>
+                        <gaz type="super" />
+                        <prixSupp>2350 $</prixSupp>
+                    </moteur>
+                    <moteur>
+                        <nbCylindres>4 cyl.</nbCylindres>
+                        <deplacement unite="litres">1,9</deplacement>
+                        <puissance unite="chevaux">110</puissance>
+                        <gaz type="diesel" />
+                        <prixSupp>1800 $</prixSupp>
+                    </moteur>
+                    <moteur>
+                        <nbCylindres>6 cyl.</nbCylindres>
+                        <deplacement unite="litres">2,8</deplacement>
+                        <puissance unite="chevaux">245</puissance>
+                        <gaz type="super" />
+                        <prixSupp>4300 $</prixSupp>
+                    </moteur>
+                </moteurs>
+            </caracteristiques>
+            <caracteristiques>
+                <sous-modele>GX familiale</sous-modele>
+                <nbPortes>5 portes</nbPortes>
+                <listeCouleurs>
+                    <couleur>noir</couleur>
+                  <couleur>rouge</couleur>
+                </listeCouleurs>
+                <prixBase>28 995 $</prixBase>
+                <listeCodes>
+                    <code />
+                </listeCodes>
+                <moteurs>
+                    <moteur>
+                        <nbCylindres>4 cyl.</nbCylindres>
+                        <deplacement unite="litres">1,8</deplacement>
+                        <puissance unite="chevaux">105</puissance>
+                        <gaz type="ordinaire" />
+                        <prixSupp />
+                    </moteur>
+                    <moteur>
+                        <nbCylindres>4 cyl.</nbCylindres>                        
+                        <deplacement unite="litres" mecanique="turbo">1,7</deplacement>
+                        <puissance unite="chevaux">170</puissance>
+                        <gaz type="super" />
+                        <prixSupp>2350 $</prixSupp>
+                    </moteur>
+                    <moteur>
+                        <nbCylindres>4 cyl.</nbCylindres>
+                        <deplacement unite="litres">1,9</deplacement>
+                        <puissance unite="chevaux">110</puissance>
+                        <gaz type="diesel" />
+                        <prixSupp>1800 $</prixSupp>
+                    </moteur>
+                    <moteur>
+                        <nbCylindres>6 cyl.</nbCylindres>                        
+                        <deplacement unite="litres">2,8</deplacement>
+                        <puissance unite="chevaux">245</puissance>
+                        <gaz type="super" />
+                        <prixSupp>4300 $</prixSupp>
+                    </moteur>
+                </moteurs>
+            </caracteristiques>
+        </sous-modeles>
+    </automobile>
+</automobiles>

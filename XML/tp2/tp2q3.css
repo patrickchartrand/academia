@@ -1,0 +1,99 @@
+/* PATRICK CHARTRAND (20017273) */
+/* corps de la page */
+bibliothèque {
+	display: block;
+	margin: 10px 20px;
+}
+
+
+/* STYLISATION DE LA LISTE (MEMBRE) */
+/* style général */
+adresse, téléphone, date-naissance {
+	display: list-item;
+	list-style-type: circle;
+	margin-left: 40px;
+}
+/* informations à retirer */
+ville, code_postal, province {
+	display: none;
+}
+/* ajout de textes entre les données */
+rue:before {content: "rue ";}
+téléphone:before {content: "Téléphone:";}
+
+
+/* STYLISATION DE LA SOUS-LISTE DES TÉLÉPHONES */
+/* style général */
+cellulaire, maison, fax {
+	display: list-item;
+	list-style-type: circle;
+	margin-left: 40px;
+}
+/* ajout de textes entre les données */
+cellulaire:before{content: "Cellulaire: ";}
+maison:before{content: "Maison: ";}
+fax:before{content: "Fax: ";}
+
+
+/* STYLISATION DE L'ESPACE DES RÉFÉRENCES */
+/* style général */
+référence {
+	display: block;
+	border: 3px solid gray;
+}
+/* ajout de textes entre les données */
+référence nom:before {content: "Référence: ";}
+
+
+/* STYLISATION DU CONTENU EN RETARD */
+/* style général */
+retards {
+	display: block;
+	margin: 0px 0px 20px 80px;
+	color: red;
+}
+/* ajout de textes entre les données */
+retards:before{content: "Retards:"; margin-left: -40px;}
+/* mini-liste */
+retards livre-emprunt {
+	display: list-item;
+	list-style-type: circle;
+}
+/* ajout d'un attribut xml */
+retards livre-emprunt:before {content: attr(livre-id);}
+/* ajout de textes entre les données */
+retards date_prévue:before{content: "Date prévue: ";}
+retards date_retournée:before{content: "Date retournée: ";}
+montant:before{content: "Amende à payer: ";}
+montant:after{content: "$";}
+
+
+/* STYLISATION DU CONTENU EN EMPRUNT */
+/* style général */
+emprunts {
+	display: block;
+	margin-left: 40px;
+}
+/* ajout de textes entre les données */
+emprunts:before{content: "Emprunts: ";}
+emprunts livre-emprunt:before {content: "Livre: "attr(livre-id);}
+emprunts date_prévue:before{content: "<Date prévue du retour: ";}
+emprunts date_prévue:after{content: ">";}
+
+
+/* STYLISATION DES ESPACES DE LIVRES */
+/* style général */
+livre {
+	display: block;
+	border: 3px solid blue;
+	color: blue;
+	margin: 10px 0px 10px -10px;
+}
+/* ajout de textes entre les données */
+livre:before {content: "Livre: ";font-size: 25px;
+}
+éditeur:before {content: "Éditeur: ";}
+/* informations à retirer */
+auteur, isbn, cdrom, photo {
+	display: none;
+}

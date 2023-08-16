@@ -1,0 +1,28 @@
+nav {
+	height: 50px;
+}
+
+li>a, select {
+	margin: auto 50px 1px auto;
+	background-color: inherit;
+	border: none;
+}
+
+input[value*="Ajouter un film"] {
+	background-color: inherit;
+	border: none;
+}
+
+input:hover, select:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+input:focus, select:focus {
+	outline: none;
+}
+
+#divAjout {
+	display: none;
+	z-index: 2;
+}

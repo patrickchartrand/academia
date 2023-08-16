@@ -1,0 +1,16 @@
+﻿<!-- PATRICK CHARTRAND (20017273) -->
+<!ELEMENT books (book+)>
+<!ELEMENT book (title, logo?, author-list, publisher?, copyright, nb-pages)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author-list (author+)>
+<!ELEMENT logo (#PCDATA)>
+<!ELEMENT author (firstname, lastname)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT copyright (#PCDATA)>
+<!ELEMENT nb-pages (#PCDATA)>
+<!ATTLIST book isbn CDATA #IMPLIED>
+<!ENTITY % languages "(french | english | spanish)">
+<!ATTLIST book language %languages; #REQUIRED>
+<!ATTLIST logo file CDATA #REQUIRED>

@@ -1,0 +1,157 @@
+/* image de fond trouvée à https://www.drshaunriddle.com/wp-content/uploads/2018/10/iStock-1039473128-1.jpg */
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+
+/* stylisation générale */
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+input:focus {
+    outline: 0;
+}
+
+select:focus {
+    outline: 0;
+}
+
+/* stylisation de l'entête */
+header {
+    width: 100%;
+    height: 10%;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+#recherche {
+    float: right;
+}
+
+#recherche input {
+    font-family: 'Julius Sans One', sans-serif;
+    background-image: url(../images/recherche.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 20px auto;
+    padding-right: 25px;
+    border: 0;
+    margin-right: 10px;
+}
+
+#recherche input:hover {
+    border-bottom: 2px solid black;
+}
+
+/* stylisation de la partie principale */
+main {
+    width: 100%;
+    height: 85%;
+}
+
+section {
+    width: 100%;
+    height: 75%;
+    background-image: url(../images/fond.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+select {
+    margin: 0 0 1% 75%;
+    display: none;
+    background-color: rgb(148, 119, 92);
+    color: rgb(280, 280, 280);
+    width: 125px;
+    height: 25px;
+}
+
+select:nth-child(1) {
+    margin: 0 0 1% 55%;
+}
+
+#couverture {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+#affichage {
+    padding: 2.5% 25%;
+}
+
+#affichage p {
+    width: 30%;
+    background-color: rgba(280, 280, 280, 0.6);
+    text-align: center;
+    border-radius: 25px;
+}
+
+table {
+    width: 100%;
+    background-color: rgba(280, 280, 280, 0.6);
+    text-align: center;
+}
+
+th, td {
+    border: 2px solid white;
+}
+
+nav {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+nav input {
+    display: inline-block;
+    margin: 50px 10px;
+    padding-top: 50px;
+    background-color: rgb(148, 119, 92);
+    background-size: 50px auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 30%; 
+    height: 100px; 
+    font-family: 'Julius Sans One', sans-serif;
+    color: rgb(280, 280, 280);
+    border-radius: 25px;
+}
+
+nav input:hover {
+    background-color: rgb(203, 171, 142);
+}
+
+nav input:nth-child(1) {
+    background-image: url(../images/patient.png);
+}
+
+nav input:nth-child(2) {
+    background-image: url(../images/etablissement.png);
+}
+
+nav input:nth-child(3) {
+    background-image: url(../images/hospitalisation.png);
+}
+
+/* stylisation du pied de page */
+footer {
+    width: 100%;
+    height: 5%;
+}
+
+footer p {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 12px;
+}

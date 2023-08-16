@@ -1,0 +1,128 @@
+<!-- Patrick Chartrand (20017273) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="tp2q3.css"?>
+<bibliothèque xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="tp2q2.xsd">
+    <membres>
+        <membre>
+            <abonné>
+                <nom>Blo</nom>
+                <prénom>Jo</prénom>
+                <adresse>
+                    <numéro>123</numéro>
+                    <rue>rue Laval</rue>
+                    <ville>Montréal</ville>
+                    <code_postal>A0A0A0</code_postal>
+                    <province>QC</province>
+                </adresse>
+                <téléphone>
+                    <cellulaire>514-999-1234</cellulaire>
+                    <maison>514-999-1235</maison>
+                </téléphone>
+                <date-naissance>1990-05-04</date-naissance>
+            </abonné>
+            <référence>
+                <nom>Blo</nom>
+                <prénom>Jo</prénom>
+                <adresse>
+                    <numéro>125</numéro>
+                    <rue>rue Laval</rue>
+                    <ville>Montréal</ville>
+                    <code_postal>A0A0A0</code_postal>
+                    <province>QC</province>
+                </adresse>
+                <téléphone>
+                    <cellulaire>514-999-1236</cellulaire>
+                    <maison>514-999-1237</maison>
+                </téléphone>
+                <date-naissance>1990-08-04</date-naissance>
+            </référence>
+            <retards>
+                <livre-emprunt livre-id="QA9123-1232-F">
+                    <date_prévue>2009-08-02</date_prévue>
+                    <date_retournée>2009-08-12</date_retournée>
+                    <montant>1.00</montant>
+                </livre-emprunt>
+                <livre-emprunt livre-id="QA9123-1232-F">
+                    <date_prévue>2009-08-22</date_prévue>
+                    <date_retournée>2009-08-25</date_retournée>
+                    <montant>0.30</montant>
+                </livre-emprunt>
+            </retards>
+        </membre>
+        <membre>
+            <abonné>
+                <nom>Toto</nom>
+                <prénom>Titi</prénom>
+                <adresse>
+                    <numéro>199</numéro>
+                    <rue>rue2</rue>
+                    <ville>ville2</ville>
+                    <code_postal>A0A0A0</code_postal>
+                    <province>AB</province>
+                </adresse>
+                <téléphone>
+                    <fax>789-100-9999</fax>
+                    <maison>789-100-9998</maison>
+                </téléphone>
+                <date-naissance>1988-01-04</date-naissance>
+            </abonné>
+            <référence>
+                <nom>Toto</nom>
+                <prénom>Tata</prénom>
+                <adresse>
+                    <numéro>199</numéro>
+                    <rue>rue3</rue>
+                    <ville>ville3</ville>
+                    <code_postal>A0A0A0</code_postal>
+                    <province>AB</province>
+                </adresse>
+                <téléphone>
+                    <maison>200-000-0000</maison>
+                    <cellulaire>200-000-0000</cellulaire>
+                </téléphone>
+                <date-naissance>1966-05-04</date-naissance>
+            </référence>
+            <emprunts>
+                <livre-emprunt livre-id="QA9123-1232-F">
+                    <date_prévue>2009-09-02</date_prévue>
+                </livre-emprunt>
+            </emprunts>
+        </membre>
+    </membres>
+    <livres>
+        <livre numéro="QA9123-1232-F">
+            <titre>Learning XML</titre>
+            <auteur>
+                <nom>Erik</nom>
+                <prenom>Kay</prenom>
+            </auteur>
+            <auteur>
+                <nom>Chose</nom>
+                <prenom>Truc</prenom>
+            </auteur>
+            <isbn>isbn0</isbn>
+            <cdrom>oui</cdrom>
+            <photo>learningXML2.gif</photo>
+            <éditeur>O'Reilly</éditeur>
+            <nb-pages>395</nb-pages>
+        </livre>
+        <livre numéro="QA9123-1999-G">
+            <titre>XML in a nutshell</titre>
+            <auteur>
+                <nom>Rusty</nom>
+                <prenom>Harold</prenom>
+                <initiales>R</initiales>
+            </auteur>
+            <auteur>
+                <nom>Scott</nom>
+                <prenom>MeansScott</prenom>
+                <initiales>W</initiales>
+            </auteur>
+            <isbn>isbn1</isbn>
+            <cdrom>non</cdrom>
+            <photo>XMLnutshell.gif</photo>
+            <éditeur>O'Reilly</éditeur>
+        </livre>
+    </livres>
+</bibliothèque>

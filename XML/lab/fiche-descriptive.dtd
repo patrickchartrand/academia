@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Modèle XML développé dans le cadre du cours INU3011 Documents structurés -->
+<!-- EBSI - Université de Montréal -->
+
+<!-- Équipe: Carolann Belhumeur (20121705), Patrick Chartrand (20017273). -->
+<!-- Élément de plus haut niveau: fiche-descriptive -->
+
+<!--
+Les commentaires commençant par "doc:" sont utilisés par oXygen comme documentation d’aide à la
+saisie. Ils sont affichés en infobulles pendant l’édition de documents conformes à la DTD lorsque le
+curseur survole un nom d’élément ou d’attribut.
+-->
+
+<!-- doc: Une fiche descriptive servant à documenter une plume ancienne de la collection de M. Brutus. -->
+<!ELEMENT plume-d-ecriture (identification, aspect-historique, aspect-physique)>
+
+<!-- doc: Nom de l’auteur.e de la fiche-descriptive, sous la forme Nom, Prénom et Nom, Prénom Particule s’il y a une particule. Omettre la ponctuation finale. Exemples:
+  St-Ambroise, Nelly de
+  Alphonse, Thierry -->
+<!ATTLIST plume-d-ecriture auteur CDATA #REQUIRED>
+
+<!-- doc: La date de création de la fiche descriptive, sous la forme AAAA-MM-JJ. Exemples:
+  2020-02-11
+  1996-07-04 -->
+<!ATTLIST plume-d-ecriture date-de-création NMTOKEN #REQUIRED>
+
+<!-- doc: La date de dernière modification de la fiche descriptive, sous la forme AAAA-MM-JJ. Exemples:
+  2018-10-19
+  2001-12-13 -->
+<!ATTLIST plume-d-ecriture date-de-dernière-modif NMTOKEN #REQUIRED>
+
+<!-- doc: Identifiant de la fiche descriptive attribué séquentiellement et composé de 5 chiffres, sous la forme 00000. Exemples:
+  00013
+  02811 -->
+<!ATTLIST plume-d-ecriture id NMTOKEN #REQUIRED>
+
+<!-- doc: Renseigne sur la présence ou l’absence d’une image de la plume d’écriture dans le dossier "images-plumes". "oui" signifie la présence d’une image et "non" l’absence d’une image. La valeur par défaut assignée est "oui". Les fichiers en format JPEG sont nommés selon l’identifiant de la fiche-descriptive (5 chiffres attribués séquentiellement). -->
+<!ATTLIST plume-d-ecriture image (Oui | Non) "Oui">
+
+<!-- doc: Les mots-clés associés à la fiche descriptive séparés par une virgule et suivi d’une espace. Exemples:
+  Première Guerre mondiale, rare, bronze
+  XIXe siècle, métal, estampe -->
+<!ATTLIST plume-d-ecriture mots-clés CDATA #IMPLIED>
+
+<!-- doc: Le statut de rédaction de la fiche-descriptive. -->
+<!ATTLIST plume-d-ecriture statut (en-cours | complétée) "en-cours">
+
+<!-- doc: Identification de la plume d’écriture. -->
+<!ELEMENT identification (nom?, modèle, type, provenance?, contributeurs, commentaires?)>
+
+<!-- doc: Le nom de la plume d’écriture. Omettre la ponctuation finale. Exemples:
+  Plume Sergent-Major
+  Plume Bayard Anglaise -->
+<!ELEMENT nom (#PCDATA)>
+
+<!-- doc: Le modèle de plume d’écriture. Exemples:
+  Sergent-Major
+  Gauloise -->
+<!ELEMENT modèle (#PCDATA)>
+
+<!-- doc: La version de la plume d’écriture. -->
+<!ATTLIST modèle version (Reproduite | Originale) "Reproduite">
+
+<!-- doc: Le type de plume d’écriture. -->
+<!ELEMENT type (estampée, embossée, inversée, standard)>
+
+<!-- doc: Type estampée de plume d’écriture. -->
+<!ELEMENT estampée EMPTY>
+
+<!-- doc: Type embossée de plume d’écriture. -->
+<!ELEMENT embossée EMPTY>
+
+<!-- doc: Type inversée de plume d’écriture. -->
+<!ELEMENT inversée EMPTY>
+
+<!-- doc: Type standard de plume d’écriture. -->
+<!ELEMENT standard EMPTY>
+
+<!-- doc: La provenance géographique de la plume d’écriture. -->
+<!ELEMENT provenance (ville, pays)>
+
+<!-- doc: La ville d’origine de la plume d’écriture. Exemples:
+  Birmingham
+  Londres -->
+<!ELEMENT ville (#PCDATA)>
+
+<!-- doc: Le pays d’origine de la plume d’écriture. Exemples:
+  Angleterre
+  Italie -->
+<!ELEMENT pays (#PCDATA)>
+
+<!-- doc: Les personnes ayant contribuées à la conception, fabrication et 
+                édition de la plume d’écriture. Exemples:
+  Parson, John
+  Chouinard, Martin -->
+<!ELEMENT contributeurs (concepteur, fabricant, éditeur)*>
+
+<!-- doc: Le nom du concepteur de la plume d’écriture, sous la forme Nom, 
+                Prénom et Nom, Prénom Particule s’il y a une particule. Omettre la ponctuation 
+                finale. Exemples:
+  Lafréchette, Jean Marie
+  Holiday, Gustave -->
+<!ELEMENT concepteur (#PCDATA)>
+
+<!-- doc: Le nom du fabricant de la plume d’écriture, sous la forme Nom, 
+                Prénom et Nom, Prénom Particule s’il y a une particule. Omettre la ponctuation 
+                finale. Exemples:
+  Parson, John
+  Chouinard, Martin -->
+<!ELEMENT fabricant (#PCDATA)>
+
+<!-- doc: Le nom de l’éditeur de la plume d’écriture, sous la forme Nom, 
+                Prénom et Nom, Prénom Particule s’il y a une particule. Omettre la ponctuation 
+                finale. Exemples:
+  Arendht, Émile
+  Santiago, Lussia -->
+<!ELEMENT éditeur (#PCDATA)>
+
+<!-- doc: Commentaires généraux pouvant être utiles ou pertinents d’être 
+                ajoutés concernant l’identification de la plume d’écriture. Mettre un signe de ponctuation 
+                final. -->
+<!ELEMENT commentaires (para+)>
+
+<!-- doc: Un paragraphe de commentaires généraux pouvant contenir des mises en 
+                emphase (<em>)et/ou des liens (<lien>) vers d’autres objets de la 
+                collection. Exemples:
+  On dit que son concepteur a eu l’idée de son design par son <em>propre 
+                    concurrent</em> !
+  Si cette plume d’écriture a été fabriquée en Italie, il reste qu’elle fut 
+                    fabriquée pour être commercialisée en Amérique du Nord. -->
+<!ELEMENT para (#PCDATA | em | lien)*>
+
+<!-- doc: Mise en emphase d’un mot ou de plusieurs mots dans la zone de 
+                commentaires généraux. Exemples:
+  Il en a fallu de peu pour que cette plume d’écriture ne soit <em>jamais</em> 
+                    connue !
+  La plume d’écriture surnommée<lien id= "00329">La Maudite</lien> ressemble 
+                    drôlement à celle-ci. -->
+<!ELEMENT em (#PCDATA | lien)*>
+
+<!-- doc: Lien servant de renvoi à d’autres objets de la collection dans la 
+                zone de commentaires généraux. Exemples:
+  La Maudite
+  Sergent-Major -->
+<!ELEMENT lien (#PCDATA)>
+
+<!-- doc: Identifiant de la fiche descriptive attribué séquentiellement et composé de 5 chiffres, sous la forme 00000 à laquelle le lien renvoie. Exemples:
+  00013
+  02811 -->
+<!ATTLIST lien id NMTOKEN #REQUIRED>
+
+<!-- doc: Aspect historique de la plume d’écriture. -->
+<!ELEMENT aspect-historique (appellation-d-origine, personnage-historique*, contexte-d-utilisation*, note-historique?)>
+
+<!-- doc: Appellation d’origine de la plume d’écriture. Omettre la ponctuation 
+                finale. Exemples:
+  La Maudite
+  Sergent-Major -->
+<!ELEMENT appellation-d-origine (#PCDATA)>
+
+<!-- doc: Le numéro d’origine de la plume d’écriture, composé d’une séquence de chiffres et pouvant comprendre des lettres majuscules. Ne pas transcrire les marqueurs de ponctuation. Exemples:
+  728
+  190F -->
+<!ATTLIST appellation-d-origine numéro-d-origine NMTOKEN #IMPLIED>
+
+<!-- doc: La période historique associée à la plume d’écriture. -->
+<!ATTLIST appellation-d-origine période-historique (18e siècle et avant | 19e siècle | 1900-1980 | 1980 et après) "19e siècle">
+
+<!-- doc: La rareté de la plume d’écriture : "oui" signifie qu’elle n’est pas courante et "non" signifie qu’elle est courante. -->
+<!ATTLIST appellation-d-origine rareté (Oui | Non) "Non">
+
+<!-- doc: Le nom de personnage historique auquel la plume 
+                d’écriture a appartenu et/ou qui l’a utilisée, sous la forme Prénom, Nom. Transcrire 
+                l’appellation courante de la personne et omettre la ponctuation 
+                finale. Exemples:
+  Reine Victoria
+  Jeanne d’Arc -->
+<!ELEMENT personnage-historique (#PCDATA)>
+
+<!-- doc: Le contexte d’utilisation originel de la plume d’écriture. Omettre la 
+                ponctuation finale. Exemples:
+  Écriture gothique
+  Utilisation de ce modèle en contexte scolaire -->
+<!ELEMENT contexte-d-utilisation (#PCDATA)>
+
+<!-- doc: Commentaires généraux pouvant être utiles ou pertinents d’être 
+                ajoutés concernant l’aspect historique de la plume d’écriture. Mettre un signe de 
+                ponctuation final. -->
+<!ELEMENT note-historique (para+)>
+
+<!-- doc: Un paragraphe de commentaires généraux pouvant contenir des mises en 
+                emphase (<em>)et/ou des liens (<lien>) vers d’autres objets de la 
+                collection. Exemples:
+  La très grande utilisation par les écoliers de la plume d’écriture Sergent-Major est 
+                    due, en grande partie, à la volonté d’honorer la mémoire des <em>braves</em> soldats 
+                    ayant combattus durant la guerre de 1870.
+  L’appellation d’origine de cette plume d’écriture a été fortement influencée par la 
+                    montée du colonialisme. -->
+<!ELEMENT para (#PCDATA | em | lien)*>
+
+<!-- doc: Mise en emphase d’un mot ou de plusieurs mots dans la zone de 
+                commentaires généraux. Exemples:
+  Il en a fallu de peu pour que cette plume d’écriture ne soit <em>jamais</em> 
+                    connue !
+  La plume d’écriture surnommée<lien id= "00329">La Maudite</lien> ressemble 
+                    drôlement à celle-ci. -->
+<!ELEMENT em (#PCDATA | lien)*>
+
+<!-- doc: Lien servant de renvoi à d’autres objets de la collection dans la 
+                zone de commentaires généraux. Exemples:
+  La Maudite
+  Sergent-Major -->
+<!ELEMENT lien (#PCDATA)>
+
+<!-- doc: Identifiant de la fiche descriptive attribué séquentiellement et composé de 5 chiffres, sous la forme 00000 à laquelle le lien renvoie. Exemples:
+  00013
+  02811 -->
+<!ATTLIST lien id NMTOKEN #REQUIRED>
+
+<!-- doc: L’aspect physique de la plume d’écriture. -->
+<!ELEMENT aspect-physique (matériau, état, couleur+, inscription*, particularité*, commentaires?)>
+
+<!-- doc: La longueur de la plume d’écriture, exprimée en mm. Exemples:
+  38
+  90 -->
+<!ATTLIST aspect-physique longueur NMTOKEN #REQUIRED>
+
+<!-- doc: La taille de la pointe de la plume d’écriture. -->
+<!ATTLIST aspect-physique taille-de-la-pointe (extra fine | fine | moyenne | grosse) "fine">
+
+<!-- doc: Le matériau dominant dans lequel la plume d’écriture a été forgée. Exemples:
+  métal
+  laiton -->
+<!ELEMENT matériau (#PCDATA)>
+
+<!-- doc: L’état dans lequel se trouve la plume d’écriture. -->
+<!ELEMENT état (neuf | en-bon-état | faiblement-endommagé | en-mauvais-état)>
+
+<!-- doc: L’état jugé neuf dans lequel se trouve la plume d’écriture. -->
+<!ELEMENT neuf EMPTY>
+
+<!-- doc: L’état jugé en bon état dans lequel se trouve la plume d’écriture. -->
+<!ELEMENT en-bon-état EMPTY>
+
+<!-- doc: L’état jugé faiblement endommagé dans lequel se trouve la plume d’écriture. -->
+<!ELEMENT faiblement-endommagé EMPTY>
+
+<!-- doc: L’état jugé en mauvais état dans lequel se trouve la plume d’écriture. -->
+<!ELEMENT en-mauvais-état EMPTY>
+
+<!-- doc: La couleur de la plume d'écriture. -->
+<!ELEMENT couleur (#PCDATA)>
+
+<!-- doc: Toute inscription (dessins, contenu textuel, etc.) figurant sur la plume d’écriture. Exemples:
+  feuille de vigne
+  Italia -->
+<!ELEMENT inscription (#PCDATA)>
+
+<!-- doc: La particularité concernant les caractéristiques physiques de la plume d’écriture. Omettre la ponctuation finale. Exemples:
+  bec courbé
+  forme atypique -->
+<!ELEMENT particularité (#PCDATA)>
+
+<!-- doc: Commentaires généraux pouvant être utiles ou pertinents d’être ajoutés concernant l’aspect physique de la plume d’écriture. Mettre un signe de ponctuation final. -->
+<!ELEMENT commentaires (para+)>
+
+<!-- doc: Un paragraphe de commentaires généraux pouvant contenir des mises en emphase et/ou des liens vers d’autres objets de la collection. Exemples:
+  On dit que son concepteur a eu l’idée de son design par son <em>propre concurrent</em> !
+  Présence de petites tâches de rouille sur le bec. -->
+<!ELEMENT para (#PCDATA | em | lien)*>
+
+<!-- doc: Mise en emphase d’un mot ou de plusieurs mots dans la zone de commentaires généraux. Exemples:
+  Comparativement aux modèles semblables, cette plume d’écriture est <em>étrangement</em> plus petite.
+  La fleur gravée sur cette plume d’écriture rappelle celle figurant sur <lien id="01457">La Bolduc</lien>. -->
+<!ELEMENT em (#PCDATA | lien)*>
+
+<!-- doc: Lien servant de renvoi à d’autres objets de la collection dans la zone de commentaires généraux. Exemples:
+  La Maudite
+  Sergent-Major -->
+<!ELEMENT lien (#PCDATA)>
+
+<!-- doc: Identifiant de la fiche descriptive attribué séquentiellement et composé de 5 chiffres, sous la forme 00000 à laquelle le lien renvoie. Exemples:
+  28140
+  44029 -->
+<!ATTLIST lien id NMTOKEN #REQUIRED>

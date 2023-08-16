@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Lab Work #2</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="icon" type="image/jpg" href="images/logo.jpg" />
+        <script type="text/javascript" src="js/hospitalisations.js"></script>
+        <script type="text/javascript" src="js/bdd.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Instituts de médecine naturelle</h1>
+            <div id="recherche">
+                <!-- boutons dont l'un est pour un listage précis des données et l'autre pour un triage à deux sélection -->
+                <input type="button" onclick="lister()" value="recherche des hospitalisations par patient" />
+                <input type="button" onclick="trier()" value="recherche des hospitalisations par établissements et spécialités" />
+            </div>
+        </header>
+        <main>
+            <section>
+                <div id="couverture">
+                    <!-- sélecteur pour le listage -->
+                    <select id="liste" onchange="listage(this)" style="display: none"></select>
+                    <!-- sélecteurs pour le triage -->
+                    <select id="tri_1" onchange="triage_1(this)" style="display: none"></select>
+                    <select id="tri_2" onchange="triage_2()" style="visibility: hidden"></select>
+                    <div id="affichage">
+                        <!-- zone d'affichage -->
+                    </div>
+                </div>
+            </section>
+            <nav>
+                <!-- boutons pour un affichage simple des données -->
+                <input type="button" onclick="afficher(1)" value="liste des patients" />
+                <input type="button" onclick="afficher(2)" value="liste des établissements" />
+                <input type="button" onclick="afficher(3)" value="liste des hospitalisations" />
+            </nav>
+        </main>
+        <footer>
+            <p><i>Par Patrick Chartrand</i></p>
+        </footer>
+    </body>
+</html>

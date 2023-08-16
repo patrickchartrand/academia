@@ -1,0 +1,51 @@
+<!-- PATRICK CHARTRAND (20017273) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books SYSTEM "livres.dtd">
+<books>
+ <book isbn="5-2341-9384-2" language="english">
+   <title>The XMLSPY Game</title>
+   <logo file="cover.gif"/>
+   <author-list>
+      <author>
+         <firstname>David</firstname>
+         <lastname>Smith</lastname>
+      </author>
+      <author>
+         <firstname>Frank</firstname>
+         <lastname>Smith</lastname>
+      </author>
+   </author-list>
+   <copyright>1999</copyright>
+   <nb-pages>330</nb-pages>
+ </book>
+ <book isbn="0-596-00420-6" language="english">
+   <title>Learning XML</title>
+   <logo file="cuit_cuit.gif"/>
+   <author-list>
+      <author>
+         <firstname>Erik</firstname>
+         <lastname>T. Ray</lastname>
+      </author>
+      <author>
+         <firstname>Bob</firstname>
+         <lastname>E. Ray</lastname>
+      </author>
+   </author-list>
+   <publisher>O'Reilly</publisher>
+   <copyright>2003</copyright>
+   <nb-pages>400</nb-pages>
+ </book>
+  <book isbn="0-596-00048-0" language="english">
+   <title>JavaScript: The Definitive Guide</title>
+   <logo file="front-page.gif"/>
+   <author-list>
+      <author>
+         <firstname>David</firstname>
+         <lastname>Flanagan</lastname>
+      </author>
+   </author-list>
+   <publisher>O'Reilly</publisher>
+   <copyright>2002</copyright>
+   <nb-pages>916</nb-pages>
+ </book>
+</books>

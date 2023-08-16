@@ -1,0 +1,35 @@
+﻿<!-- PATRICK CHARTRAND (20017273) -->
+<!-- l'indentation des déclarations ne sert qu'à améliorer la lecture de la DTD -->
+<!ELEMENT automobiles (automobile+)>
+    <!ELEMENT automobile (fabricant, modele, options, sous-modeles)>
+        <!ELEMENT fabricant (#PCDATA)>
+        <!ELEMENT modele (#PCDATA)>
+        <!ELEMENT options (option+)>
+            <!ELEMENT option (codeOpt, prixOpt, description)>
+                <!ELEMENT codeOpt (#PCDATA)>
+                    <!ATTLIST codeOpt num ID #REQUIRED>
+                <!ELEMENT prixOpt (#PCDATA)>
+                <!ELEMENT description (#PCDATA)>
+        <!ELEMENT sous-modeles (caracteristiques+)>
+        <!ELEMENT caracteristiques (sous-modele, nbPortes, listeCouleurs, prixBase, listeCodes, moteurs)>
+            <!ELEMENT sous-modele (#PCDATA)>
+            <!ELEMENT nbPortes (#PCDATA)>
+            <!ELEMENT listeCouleurs (couleur+)>
+                <!ELEMENT couleur (#PCDATA)>
+            <!ELEMENT prixBase (#PCDATA)>
+            <!ELEMENT listeCodes (code+)>
+            <!ELEMENT code (#PCDATA)>
+                <!ATTLIST code numRef IDREF #IMPLIED>
+            <!ELEMENT moteurs (moteur+)>
+                <!ELEMENT moteur (nbCylindres, deplacement, puissance, gaz, prixSupp)>
+                    <!ELEMENT nbCylindres (#PCDATA)>
+                    <!ELEMENT deplacement (#PCDATA)>
+                        <!ATTLIST deplacement mecanique CDATA #FIXED "turbo">
+                    <!ELEMENT puissance (#PCDATA)>
+                        <!ENTITY % unites "(litres | chevaux)">
+                            <!ATTLIST deplacement unite %unites; #REQUIRED>
+                            <!ATTLIST puissance unite %unites; #REQUIRED>
+                    <!ELEMENT gaz EMPTY>
+                        <!ENTITY % types "(ordinaire | super | diesel)">
+                            <!ATTLIST gaz type %types; #REQUIRED>
+                    <!ELEMENT prixSupp (#PCDATA)>

@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* stylisation générale : corps de texte et validations Web */
+body {
+    width: 55%;
+    margin: auto;
+}
+
+#validationHTML {
+    width: 50%;
+    float: left;
+}
+
+#validationCSS {
+    width: 50%;
+    float: right;
+}
+
+/* stylisation des images (partie 1) */
+img {
+    float: left;
+}
+
+/* stylisation de la liste (partie 1) */
+ul {
+    list-style-type: none;
+    padding: 10px 0px 0px 0px;
+    margin: 0px 0px 75px 0px;
+}
+li {
+    padding-bottom: 7px;
+}
+.conteneurs {
+    display: inline-block;
+    position: relative;
+    padding-right: 25px;
+}
+
+/* désactivation du style par défaut des bouttons (partie 1) */
+.conteneurs input {
+    display: none;
+}
+
+/* stylisation de bouttons (partie 1) */
+.conteneurs .bouttons {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: -3px;
+    border-radius: 50%;
+    border: 1px solid black;    
+}
+.conteneurs input:checked + .bouttons:after {
+    content: "";
+    height: 11px;
+    width: 11px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* stylisation de bouttons (parties 2 et 3) */
+input[onclick] {
+    background-color: lightgray;
+    height: 19px;
+}
+
+/* stylisation de l'arrière-plan (partie 4) */
+#sur, #sous {
+    background-color: #e5eecc;
+    border: 1px solid #c3c3c3;
+    padding: 5px;
+}
+
+#sous {
+    padding: 50px;
+    display: none;
+}

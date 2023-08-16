@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab Work #3</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="icon" type="image/jpg" href="images/logo.jpg" />
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<!-- code javascript séparé en deux pour faire plus propre et clair à la correction -->
+		<script src="js/req_afficher.js"></script>
+		<script src="js/req_rechercher.js"></script>
+		<!-- codes de mise en forme des listes sélectives selon les consignes et d'autres -->
+		<script src="js/animations.js"></script>
+	</head>
+	<!-- mise en évidence de la stylisation des listes de sélection -->
+	<style>
+		select {
+		    margin: 30px 10px 0 10px;
+		    padding: 10px 30px;
+		    border: 2px solid #665544;
+		    -moz-appearance: none; 
+    		-webkit-appearance: none; 
+    		appearance: none;
+		    background-color: #f4f4f4;
+		    color: #665544;
+		    font-size: 12px;
+		    outline: none;
+		}
+		option:nth-child(1) {
+		    background-color: #f4f4f4;
+		    color: #665544;
+		    font-size: 12px;
+		}
+		option:nth-child(2n+2) {
+		    background-color: #86979b;
+		    color: #f4f4f4;
+		    font-size: 12px;		    
+		}
+		option:nth-child(2n+3) {
+		    background-color: #d4d0c6;
+		    color: #f4f4f4;
+		    font-size: 12px;		    
+		}
+	</style>
+	<body>
+		<!-- ajout d'un script perso -->
+		<script>
+			$("body").hide(0).delay(500).fadeIn(3000);
+		</script>
+		<h1>La médecine par les plantes</h1>
+		<p>Voici toutes les informations sur nos dossiers traités, nos établissements et nos hospitalisations.</p>
+		<div id="rech">
+			<input class="nav" type="button" value="recherche d'hospitalisations par patient" onclick="rechercher(1)"/>
+			<input class="nav" type="button" value="recherche d'hospitalisations par établissement et spécialité" onclick="rechercher(2)"/>
+		</div>
+		<div id="nav1">
+			<input class="nav" type="button" onclick="afficher(1)"/>
+			<br/>
+			<p>Retrouver un dossier</p>
+		</div>
+		<div id="nav2">
+			<input class="nav" type="button" onclick="afficher(2)"/>
+			<br/>
+			<p>Visiter un établissement</p>
+		</div>
+		<div id="nav3">
+			<input class="nav" type="button" onclick="afficher(3)"/>
+			<br/>
+			<p>Consulter une hospitalisation</p>
+		</div>
+		<!-- ajout d'un autre script perso -->
+		<script>
+			$(".nav").click(function() {
+  				$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+  				return false;
+			});
+		</script>
+		<div id="affichage"></div>
+		<div id="sign">
+			<p>Par Patrick Chartrand</p>
+			<p>19 avril 2020</p>
+		</div>
+	</body>
+</html>

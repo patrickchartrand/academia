@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hospitalisations>
+    <hospitalisation codeEtablissement="1234" noDossier="5">
+        <dateAdmission>14-août-00</dateAdmission>
+        <dateSortie>14-août-01</dateSortie>
+        <specialite>médecine</specialite>
+    </hospitalisation>
+    <hospitalisation codeEtablissement="1234" noDossier="10">
+        <dateAdmission>12-déc.-92</dateAdmission>
+        <dateSortie>12-déc.-92</dateSortie>
+        <specialite>chirurgie</specialite>
+    </hospitalisation>
+    <hospitalisation codeEtablissement="2346" noDossier="8">
+        <dateAdmission>03-mars-03</dateAdmission>
+        <dateSortie>05-mars-03</dateSortie>
+        <specialite>médecine</specialite>
+    </hospitalisation>
+    <hospitalisation codeEtablissement="2346" noDossier="3">
+        <dateAdmission>12-avr.-95</dateAdmission>
+        <dateSortie>30-avr.-95</dateSortie>
+        <specialite>médecine</specialite>
+    </hospitalisation>
+    <hospitalisation codeEtablissement="2346" noDossier="1">
+        <dateAdmission>11-nov.-97</dateAdmission>
+        <dateSortie>12-nov.-97</dateSortie>
+        <specialite>orthopédie</specialite>
+    </hospitalisation>
+    <hospitalisation codeEtablissement="3980" noDossier="5">
+        <dateAdmission>14-févr.-00</dateAdmission>
+        <dateSortie>14-mars-00</dateSortie>
+        <specialite>médecine</specialite>
+    </hospitalisation>
+    <hospitalisation codeEtablissement="3980" noDossier="5">
+        <dateAdmission>01-janv.-01</dateAdmission>
+        <dateSortie>01-févr.-01</dateSortie>
+        <specialite>médecine</specialite>
+    </hospitalisation>
+    <hospitalisation codeEtablissement="3980" noDossier="9">
+        <dateAdmission>03-avr.-95</dateAdmission>
+        <dateSortie>08-avr.-95</dateSortie>
+        <specialite>orthopédie</specialite>
+    </hospitalisation>
+    <hospitalisation codeEtablissement="3980" noDossier="7">
+        <dateAdmission>27-nov.-99</dateAdmission>
+        <dateSortie>04-déc.-99</dateSortie>
+        <specialite>chirurgie</specialite>
+    </hospitalisation>
+    <hospitalisation codeEtablissement="3980" noDossier="10">
+        <dateAdmission>28-avr.-97</dateAdmission>
+        <dateSortie>05-mai-97</dateSortie>
+        <specialite>chirurgie</specialite>
+    </hospitalisation>
+    <hospitalisation codeEtablissement="4177" noDossier="3">
+        <dateAdmission>03-août-01</dateAdmission>
+        <dateSortie>05-déc.-01</dateSortie>
+        <specialite>orthopédie</specialite>
+    </hospitalisation>
+    <hospitalisation codeEtablissement="7306" noDossier="2">
+        <dateAdmission>23-mai-98</dateAdmission>
+        <dateSortie>27-mai-98</dateSortie>
+        <specialite>orthopédie</specialite>
+    </hospitalisation>
+</hospitalisations>

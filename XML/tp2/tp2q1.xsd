@@ -1,0 +1,154 @@
+<!-- Patrick Chartrand (20017273) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="weather">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="link" type="xs:anyURI"/>
+                <xs:element name="language" minOccurs="0">
+                    <xs:complexType>
+                        <xs:attribute name="encodingLanguage" type="xs:string" default="en"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="note">
+                    <xs:complexType mixed="true">
+                        <xs:sequence>
+                            <xs:element name="br" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="b" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="i" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- balise isolée car elle a plus de contenu -->
+                <xs:element ref="city" maxOccurs="unbounded"/>
+                <xs:element name="lastUpdated" minOccurs="0" type="xs:dateTime"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- balise 'city' -->
+    <xs:element name="city">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="cityName"/>
+                <xs:element ref="temperature"/>
+                <xs:element ref="uvIndex"/>
+                <xs:element ref="humidity"/>
+                <xs:element ref="pressure"/>
+                <xs:element ref="conditions"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- balise 'cityName' -->
+    <xs:element name="cityName">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:restriction base="xs:anyType">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Montreal"/>
+                            <xs:enumeration value="Quebec"/>
+                            <xs:enumeration value="Toronto"/>
+                            <xs:enumeration value="Ottawa"/>
+                            <xs:enumeration value="Vancouver"/>
+                            <xs:enumeration value="Edmonton"/>
+                            <xs:enumeration value="Regina"/>
+                            <xs:enumeration value="Calgary"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                    <xs:attribute name="id" use="required">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="[P]{1}[0-9]{6}"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:restriction>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- balise 'temperature' -->
+    <xs:element name="temperature">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="value">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="-300"/>
+                            <xs:maxInclusive value="300"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="unit">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="C|F"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- balise 'uvIndex' -->
+    <xs:element name="uvIndex">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="0"/>
+                <xs:maxInclusive value="16"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <!-- balise 'humidity' -->
+    <xs:element name="humidity">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minExclusive value="0"/>
+                <xs:maxExclusive value="100"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <!-- balise 'pressure' -->
+    <xs:element name="pressure">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="value">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                            <xs:pattern value="[0-9]{4}[.][0-9]{1}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="unit">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="mb|hPa"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- balise 'conditions' -->
+    <xs:element name="conditions">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="img" use="optional">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:anyURI">
+                                <xs:pattern value="(.+.[.](gif|jpg|png))*"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>    
+    
+</xs:schema>

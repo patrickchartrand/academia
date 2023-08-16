@@ -1,0 +1,142 @@
+/* PATRICK CHARTRAND (20017273) */
+/* corps de la page */
+bibliothèque {
+	display: block;
+	margin: 10px 20px;
+	/* incrémentation du numéro pour chaque membre : initialisation */
+	counter-reset: myCounter;
+}
+
+
+/* STYLISATION DE L'ESPACE 'MEMBRES' */
+/* style général */
+membres:before {
+	content: "Membres";
+	display: block;
+	font-size: 25px;
+}
+/* style par membre */
+membre {
+	display: block;
+	border: 2px solid gray;
+	margin: 0px 0px -2px 10px;
+}
+/* ajout de texte aux données */
+membre:before {
+	/* incrémentation du numéro pour chaque membre : affichage */
+	counter-increment: myCounter;
+	content: "Membre #"counter(myCounter)": ";
+	display: inline-block;
+	margin: 5px 0px 0px 5px;
+}
+/* structure en liste */
+adresse, téléphone, date-naissance {
+	margin-left: 40px;
+	display: list-item;
+	list-style-type: circle;
+}
+/* ajout de textes entre les données */
+rue:before {content: "rue ";}
+téléphone:before {content: "Téléphone:";}
+date-naissance:before {content: "Naissance: ";}
+/* style par donnée listée */
+ville, code_postal, province {
+	display: list-item;
+	list-style-type: none;
+
+}
+/* style par référence */
+référence {
+	display: block;
+	border: 1px solid gray;
+	margin-left: 25px;
+}
+référence nom:before {content: "Référence: "; display: inline-block; white-space: pre; margin: 5px 0px 0px 5px;}
+/* style par retard */
+retards {
+	display: block;
+	margin: 0px 0px 5px 80px;
+	color: red;
+}
+/* ajout de textes aux données */
+retards:before{content: "Retards:"; margin-left: -40px;}
+/* mini-liste */
+retards livre-emprunt {
+	display: list-item;
+	list-style-type: circle;
+}
+/* ajout d'un attribut xml */
+retards livre-emprunt:before {content: attr(livre-id);}
+/* ajout de textes aux données */
+retards date_prévue:before{content: "Date prévue: ";}
+retards date_retournée:before{content: "Date retournée: ";}
+montant:before{content: "Amende à payer: ";}
+montant:after{content: "$";}
+/* style par téléphone */
+cellulaire, maison, fax {
+	display: list-item;
+	list-style-type: square;
+	margin-left: 40px;
+}
+/* ajout de textes aux données */
+cellulaire:before{content: "Cellulaire: ";}
+maison:before{content: "Maison: ";}
+fax:before{content: "Fax: ";}
+/* style par emprunt */
+emprunts {
+	display: block;
+	margin: 0px 0px 5px 40px;
+}
+/* ajout de textes aux données */
+emprunts:before{content: "Emprunts: ";}
+emprunts livre-emprunt:before {content: "Livre: "attr(livre-id);}
+emprunts date_prévue:before{content: "<Date prévue du retour: ";}
+emprunts date_prévue:after{content: ">";}
+
+
+/* STYLISATION DE L'ESPACE 'LIVRES' */
+/* style général */
+livres:before {
+	content: "Livres: ";
+	font-size: 25px;
+	color: blue;
+	display: block;
+	margin-top: 10px;
+}
+/* style par livre */
+livre {
+	display: block;
+	color: blue;
+	border: 3px solid blue;
+	margin: 0px 0px 10px 10px;
+}
+/* structure en liste */
+prenom, isbn, cdrom, éditeur, nb-pages {
+	display: list-item;
+	list-style-type: circle;
+	margin-left: 35px;
+}
+/* information à retirer */
+photo {
+	display: none;
+}
+/* ordre des données */
+auteur {
+	display: flex;
+}
+auteur prenom {
+	order: 1;
+}
+auteur nom {
+	order: 2;
+}
+auteur initiales {
+	order: 3;
+}
+/* ajout de texte aux données */
+auteur prenom:before {content: "Auteur: ";}
+auteur nom:before, auteur initiales:before {content: " "; white-space: pre;}
+isbn:before {content: "ISBN: ";}
+cdrom:before {content: "CD-ROM: ";}
+éditeur:before {content: "Éditeur: ";}
+nb-pages:before {content: "Nb. pages: ";}

@@ -1,0 +1,219 @@
+body  {
+    background-color: #99BBDD;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    height: 230px;
+}
+
+main div {
+    padding-top: 35px;
+}
+
+main p {
+    padding-left: 10px;
+}
+
+/* stylisation des liens */
+
+#navigation a:visited {
+    color: blue;
+}
+
+.active a:link {
+    text-decoration: none;
+}
+
+#villes a:link, #villes a:visited {
+    color: red;
+    text-decoration: none;
+}
+
+#villes a:active {
+    background-color: white;
+}
+
+a[target=_blank], footer a {
+    color: mediumpurple;
+}
+
+a[target=_blank]:hover, footer a:hover {
+    color: purple;
+}
+
+/* stylisation du header */
+
+#conteneur {
+    width: 920px;
+    margin: auto;
+    background-color: #FFFFFF;
+}
+
+header {
+    background-image: url("../images/nuages_708.jpg");
+    position: relative;
+    height: 125px;
+}
+
+h1 {
+    color: yellow;
+    font-size: 50px;
+    font-weight: 600;
+    position: absolute;
+    margin: 15px;
+}
+
+#navigation {
+    table-layout: fixed;
+    background-color: yellow;
+    width: 100%;
+    color: blue;
+}
+
+#nav1 {
+    width: auto; 
+    text-align: left; 
+    padding-left: 80px;
+}
+
+#nav2 {
+    width: auto; 
+    text-align: left; 
+    padding-left: 15px;
+}
+
+#nav3 {
+    width: auto; 
+    text-align: left; 
+    padding-left: 35px; 
+}
+
+/* stylisation du footer */
+
+footer table {
+    table-layout: fixed;
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+}
+        
+footer tr:nth-of-type(1) td:nth-of-type(2) {
+    width: 60%;
+    padding-bottom: 35px;
+}
+
+footer td:not(:nth-of-type(2)) {
+    width: 20%;
+}
+
+#imgCSS {
+    float: right;
+    margin-bottom: 65px;
+    padding: 0;
+}
+
+#imgHTML {
+    float: left;
+    margin-bottom: 65px;
+    padding: 0;
+}
+
+/* stylisation de la liste des villes */
+
+#villes {
+    width: 200px;
+    list-style-type: none;
+    background-color: #ffe6e6;
+    margin-left: 36px;
+    font-weight: bold;
+}
+
+/* stylisation du formulaire */
+
+#options {
+    padding-left: 8px;
+}
+
+#option1 {
+    margin-left: 45px; 
+    padding-right: 20px;
+}
+        
+#option2 {
+    margin-left: 45px; 
+    padding-right: 20px;
+}
+        
+#option3 {
+    margin-left: 45px;
+    min-width: 400px;
+    max-width: 700px;
+    height: 75px;
+    border-color: lightgray;
+    resize: horizontal;
+}
+
+input[type=submit], input[type=reset] {
+    background-color: lightgray;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+/* stylisation du tableau météo */
+
+#meteo {
+    table-layout: fixed;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border-width: 3px 3px 1px 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+#meteo tr:first-child {
+    border: 1px solid black;
+    background-color: #33CCCC;
+    text-align: center;
+    color: white;
+    height: 15px;
+}
+
+#meteo tr:nth-child(2) {
+    height: 65px; 
+}
+
+#meteo tr:nth-child(3) {
+    height: 75px;
+}
+
+
+#meteo tr:first-child td:not(:last-child) {
+    border-right-color: white;
+}
+
+#meteo tr:not(:first-child), #meteo td {
+    border: 1px solid black;
+}
+
+#meteo img {
+    background-color: black;
+}
+
+/* stylisation des données du tableau météo */
+
+.data {
+    list-style-type: none; 
+    padding: 0; 
+    margin-bottom: 0;
+}
+
+.data li:first-child {
+    color: blue;
+}
+
+.data li:last-child {
+    color: red;
+}

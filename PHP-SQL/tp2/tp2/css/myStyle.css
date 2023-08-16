@@ -1,0 +1,10 @@
+input[name*="films"], input[name*="sortir"], select {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+button {
+  margin: auto 15px !important;
+}

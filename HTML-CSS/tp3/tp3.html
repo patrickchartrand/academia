@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr-Ca">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <title>travail pratique #3</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Travail pratique #3</h1>
+        <h2>Identification</h2>
+        <p>
+            Ce travail a &#233;t&#233; fait par Patrick Chartrand, matricule&nbsp;: 20017273.
+        </p>
+        <h2>Partie 1&nbsp;: Affichage et animation des images</h2>
+        <img id="nourriture" src="images/salade.jpg" alt="salade" title="salade" width="200" height="155" />
+        <ul>
+            <li>
+                <label class="conteneurs">Salade 
+                    <input type="radio" id="salade" name="nourriture" value="salade" checked onclick="document.getElementById('nourriture').src='images/salade.jpg';">
+                    <span class="bouttons"></span>
+                </label>
+            </li>
+            <li>
+                <label class="conteneurs">Spaghetti 
+                    <input type="radio" id="spaghetti" name="nourriture" value="spaghetti" onclick="document.getElementById('nourriture').src='images/spaghetti.jpg';">
+                    <span class="bouttons"></span>
+                </label>
+            </li>
+            <li>
+                <label class="conteneurs">Cr&#232;me glac&#233;e 
+                    <input type="radio" id="cremeGlacee" name="nourriture" value="cremeGlacee" onclick="document.getElementById('nourriture').src='images/cremeglacee.jpg';">
+                    <span class="bouttons"></span>
+                </label>
+            </li>
+        </ul>
+        <!-- voir le css externe pour la mise en page de la partie 1 -->
+        <h2>Partie 2&nbsp;: Affichage dans la page Web contr&#244;l&#233;e par JavaScript</h2>
+        <p>
+            Nom&nbsp;: <input type="text" name="nom" id="nom">
+        </p>
+        <p>
+            Niveau (1 &#224; 6)&nbsp;: <input type="text" name="niveau" id="niveau">
+            <input type="submit" value="afficher partie 2" onclick="message()">
+        </p>
+        <div id="affichage">
+            Affichage ici.
+        </div>
+        <script>
+            /* codes en JavaScript pour la partie 2 */
+            function message() {
+            var nombre = document.getElementById('niveau').value;
+            document.getElementById('affichage').innerHTML = 
+            '<h'+nombre+'>'+'Bonjour '+document.getElementById('nom').value+' niveau='+document.getElementById('niveau').value+'</h'+nombre+'>'; 
+            document.getElementById('affichage').style.color='green';
+                if ((nombre < 1)||(nombre > 6)) { 
+                    document.getElementById('affichage').innerHTML = '<span style=\'color:red;\'>Erreur&nbsp;: le niveau doit &#234;tre entre 1 et 6</span>'; return false;
+                }
+            }
+        </script>
+        <h2>Partie 3&nbsp;: Formulaire de conversion</h2>
+        <form action="#" method="POST" onsubmit="return false;">
+            Valeur&nbsp;: <input type="text" name="valeur" id="valeur"> <span id="conversion">R&#233;sultat ici</span><br>
+            <input type="submit" value="Pouces vers cm" onclick="poucesCm()">
+            <input type="submit" value="Cm vers pources" onclick="cmPouces()">
+            <input type="submit" value="Celcius vers Farenheit" onclick="celciusFarenheit()">
+            <input type="submit" value="Farenheit vers Celcius" onclick="farenheitCelcius()">
+        </form>
+        <script>
+            /* codes en JavaScript pour la partie 3 */
+            function poucesCm() {
+                var mesure = document.getElementById('valeur').value;
+                mesure = mesure * 2.5; 
+                document.getElementById('conversion').innerHTML = 'pouces ==> '+mesure+' cm';
+            }
+            function cmPouces() {
+                var mesure = document.getElementById('valeur').value;
+                mesure = mesure / 2.5; 
+                document.getElementById('conversion').innerHTML = 'cm ==> '+mesure+' pouces';
+            }
+            function celciusFarenheit() {
+                var mesure = document.getElementById('valeur').value;
+                mesure = (mesure * 1.8) + 32; 
+                document.getElementById('conversion').innerHTML = 'celcius ==> '+mesure.toFixed(1)+' farenheit';
+            }
+            function farenheitCelcius() {
+                var mesure = document.getElementById('valeur').value;
+                mesure = (mesure - 32) / 1.8; 
+                document.getElementById('conversion').innerHTML = 'farenheit ==> '+mesure.toFixed(1)+' celcius';
+            }
+        </script>
+        <h2 id="sur">Partie 4&nbsp;: JQuery (cliquez ici)</h2>
+        <p id="sous">
+            Voil&#224; le contenu de la partie 4, cliquez de nouveau sur le titre
+        </p>
+        <!-- codes JQuery pour la partie 4 -->
+        <script>
+            $(document).ready(function(){
+                $("#sur").click(function(){
+                    $("#sous").slideToggle("slow");
+                });
+            });
+        </script>
+        <div>
+            <p id="validationHTML">
+                <a href="http://validator.w3.org/check/referer"><img src="images/valid_html_blue.png" alt="validation html" title="validation html" /></a>
+            </p>
+            <p id="validationCSS">
+                <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/valid_css_blue.png" alt="validation css" title="validation css" /></a>
+            </p>
+        </div>
+    </body>
+</html>

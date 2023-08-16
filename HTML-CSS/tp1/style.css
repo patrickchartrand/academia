@@ -1,0 +1,43 @@
+body {
+  color: #4F4F4E;
+  text-align: justify;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 14px;
+  padding: 1em;
+  margin: auto;
+  width: 50%;
+}
+
+h1:not(:last-child) {
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+  margin-top: 1em;
+  font-weight: normal;
+  background-color: darkcyan;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #1A1A1B;
+  margin-top: 1em;
+  font-weight: normal;
+}
+
+#identification {
+  border: 2px solid #0645ad; 
+  text-align: center;
+}
+
+#validation {
+  font-size: 6pt; 
+  text-align: center;
+}
+
+cite a {
+  color: #f44242;
+}
+
+address a {
+  color: #c141f4;
+}

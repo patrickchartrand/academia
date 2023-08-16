@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patients>
+    <patient noDossier="1">
+        <nom>Léger</nom>
+        <prenom>Émile</prenom>
+        <naissance>26 mars 1917</naissance>
+        <sexe>M</sexe>
+    </patient>
+    <patient noDossier="2">
+        <nom>Bernard</nom>
+        <prenom>Marie</prenom>
+        <naissance>3 février 1946</naissance>
+        <sexe>F</sexe>
+    </patient>
+    <patient noDossier="3">
+        <nom>Chartrand</nom>
+        <prenom>Guy</prenom>
+        <naissance>5 avril 1959</naissance>
+        <sexe>M</sexe>
+    </patient>
+    <patient noDossier="4">
+        <nom>Côté</nom>
+        <prenom>André</prenom>
+        <naissance>2 septembre 1978</naissance>
+        <sexe>M</sexe>
+    </patient>
+    <patient noDossier="5">
+        <nom>Lavoie</nom>
+        <prenom>Carole</prenom>
+        <naissance>4 novembre 1973</naissance>
+        <sexe>F</sexe>
+    </patient>
+    <patient noDossier="6">
+        <nom>Martin</nom>
+        <prenom>Diane</prenom>
+        <naissance>2 décembre 1965</naissance>
+        <sexe>F</sexe>
+    </patient>
+    <patient noDossier="7">
+        <nom>Lacroix</nom>
+        <prenom>Pauline</prenom>
+        <naissance>25 janvier 1956</naissance>
+        <sexe>F</sexe>
+    </patient>
+    <patient noDossier="8">
+        <nom>St-Jean</nom>
+        <prenom>Arthur</prenom>
+        <naissance>7 octobre 1912</naissance>
+        <sexe>M</sexe>
+    </patient>
+    <patient noDossier="9">
+        <nom>Béchard</nom>
+        <prenom>Marc</prenom>
+        <naissance>8 août 1980</naissance>
+        <sexe>M</sexe>
+    </patient>
+    <patient noDossier="10">
+        <nom>Chartrand</nom>
+        <prenom>Mario</prenom>
+        <naissance>23 juillet 1947</naissance>
+        <sexe>M</sexe>
+    </patient>
+</patients>

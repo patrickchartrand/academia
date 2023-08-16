@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Lab Work #3</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <!-- scripts perso  -->
+    <script language="javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script language="javascript" src="js/requetesFilms.js"></script>
+    <script language="javascript" src="js/affichageFilms.js"></script>
+    <!-- scripts généraux -->
+    <script language="javascript">
+      function ouvrir(elem){
+        document.getElementById(elem).style.display='block';
+        document.getElementById(elem).style.margin="5px 50px 5px 250px";
+        document.getElementById(elem).style.padding="50px 50px";
+        document.getElementById(elem).style.background="rgba(250,250,250,0.9)";
+      }
+      function fermer(elem){
+        document.getElementById(elem).style.display='none';
+      }
+      function chargerImage() {
+        var fichier = document.getElementById('mediaImage').value;
+        fichier = fichier.split("\\").pop();
+        document.getElementById('image').value = fichier;
+      }
+      function chargerVideo() {
+        var fichier = document.getElementById('mediaVideo').value;
+        fichier = fichier.split("\\").pop();
+        document.getElementById('video').value = fichier;
+      }
+    </script>
+  </head>
+  <body onLoad="requetesFilms('afficher');requetesFilms('classer');">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <div class="row justify-content-start">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="text-white" href="index.html" onClick="requetesFilms('afficher');">Nos films</a>
+                </li>
+                <li class="nav-item">
+                  <form id="formRecherche">
+                    <select id="options" class="text-white" name="genres" onChange="requetesFilms('rechercher');"></select>
+                    <input type="hidden" name="action" value="rechercher">
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row justify-content-end">
+            <input class="text-primary" type="button" value="Ajouter un film" onClick="ouvrir('divAjout');"/>
+          </div>
+        </div>
+      </nav>
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1>Cinémathèque</h1>
+          <p class="lead text-muted">Revisionnez les grands classiques du cinéma hollywoodien des 90's</p>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <div id="divAjout">
+        <div id="divInfo"></div>
+        <h2>Ajouter un film</h2>
+        <form id="formAjout">
+          <label for="title">Titre :</label><br/><input type="text" id="title" name="title" required/><br/>
+          <label for="producer">Producteur :</label><br/><input type="text" id="producer" name="producer" required/><br/>
+          <label for="genre">Catégorie :</label><br/><input type="text" id="genre" name="genre" required/><br/>
+          <label for="duration">Durée :</label><br/><input type="number" id="duration" name="duration" required/><br/>
+          <label for="price">Prix :</label><br/><input type="number" id="price" name="price" required><br/>
+          <label for="quantity">Quantité :</label><br/><input type="number" id="quantity" name="quantity" required/><br/>
+          <label for="mediaImage">Image :</label><br/><input type="file" id="mediaImage" name="mediaImage" onChange="chargerImage();" required/>
+          <input type="hidden" id="image" name="image"/><br/>
+          <label for="mediaVideo">Vidéo :</label><br/><input type="file" id="mediaVideo" name="mediaVideo" onChange="chargerVideo();" required/>
+          <input type="hidden" id="video" name="video"/><br/><br/>
+          <input type="hidden" name="action" value="ajouter"/>
+          <input class="btn btn-sm btn-outline-success" type="button" value="Envoyer" onClick="requetesFilms('ajouter');"/>
+          <input class="btn btn-sm btn-outline-danger" type="reset" value="Effacer"/><br/><br/>
+          <input class="btn btn-sm btn-outline-dark" type="button" value="Fermer" onClick="fermer('divAjout');"/>
+        </form>
+      </div>
+      <section id="contenu"></section>  
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>Par Patrick Chartrand</p>
+      </div>
+    </footer>
+
+    <!-- scripts Bootstrap -->
+    <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script language="javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

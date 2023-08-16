@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE modèleXML3011 SYSTEM "https://cours.ebsi.umontreal.ca/INU3011/modeleXML3011-lite/modeleXML3011.dtd">
+<?xml-stylesheet type="text/css" href="https://cours.ebsi.umontreal.ca/INU3011/modeleXML3011-lite/modeleXML3011.css"?>
+<modèleXML3011 xml:lang="fr">
+    <équipe>
+        <membre>
+            <prénom>Carolann</prénom>
+            <nomFamille>Belhumeur</nomFamille>
+            <matriculeUdeM>20121705</matriculeUdeM>
+        </membre>
+        <membre>
+            <prénom>Patrick</prénom>
+            <nomFamille>Chartrand</nomFamille>
+            <matriculeUdeM>20017273</matriculeUdeM>
+        </membre>
+    </équipe>
+    <contexteDuModèle>
+        <para>Ce modèle XML, mandaté par M. Brutus, historien retraité et collectionneur à plein
+            temps, a été créé pour faciliter la saisie de l'information sur les objets de sa
+            collection, d'une part, et assurer l'uniformisation et la cohérence de la description de
+            sa collection, d'autre part. Ce modèle sert donc à décrire les objets de la collection
+            individuellement en structurant l'information saisie de façon à la rendre
+            prévisisble.</para>
+        <para>M. Brutus collectionne les plumes d'écriture anciennes fabriquées à diveses époques et
+            dans plusieurs matériaux et ce, que l'objet soit une reproduction ou un original. Il
+            n'en demeure pas moins que la quête de M. Brutus pour amasser les plumes d'écriture
+            anciennes originales est continuelle comme une histoire sans fin !</para>
+        <para>M. Brutus fait partie, depuis 1991, du Club des Collectionneurs d'Objets
+            d'Écriture(CCOE) où se réunissent des calamophilistes provenant des quatre coins du
+            monde ! <url>http://aufildelaplume.toile-libre.org/category/ccoe/</url></para>
+    </contexteDuModèle>
+    <EPHN>fiche-descriptive</EPHN>
+    <éléments>
+        <élément>
+            <idGen>plume-d-ecriture</idGen>
+            <descriptionPourInfobulle xml:space="preserve">Une fiche descriptive servant à documenter une plume ancienne de la collection de M. Brutus.</descriptionPourInfobulle>
+            <modèleContenuXML xml:space="preserve">(identification, aspect-historique, aspect-physique)</modèleContenuXML>
+            <attributs>
+                <attribut>
+                    <nom>id</nom>
+                    <descriptionPourInfobulle>Identifiant de la fiche descriptive attribué séquentiellement et composé de 5 chiffres, sous la forme 00000.</descriptionPourInfobulle>
+                    <NMTOKEN/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>00013</exemple>
+                        <exemple>02811</exemple>
+                    </exemplesValeurAttendue>
+                </attribut>
+                <attribut>
+                    <nom>statut</nom>
+                    <descriptionPourInfobulle>Le statut de rédaction de la fiche-descriptive.</descriptionPourInfobulle>
+                    <énuméré>
+                        <valeurPossible>en-cours</valeurPossible>
+                        <valeurPossible>complétée</valeurPossible>
+                    </énuméré>
+                    <valeurParDéfaut>en-cours</valeurParDéfaut>
+                    <commentairesDeModélisation>Cet attribut a été ajouté pour renseigner le
+                        collectionneur sur le statut de rédaction de la fiche-descriptive, car il
+                        arrive que n’ayant pas sous la main l’ensemble des renseignements relatifs à
+                        la plume d’écriture à décrire, il commence la rédaction de la fiche
+                        descriptive sans qu’elle soit exhaustive.</commentairesDeModélisation>
+                </attribut>
+                <attribut>
+                    <nom>auteur</nom>
+                    <descriptionPourInfobulle>Nom de l’auteur.e de la fiche-descriptive, sous la forme Nom, 
+                        Prénom et Nom, Prénom Particule s’il y a une particule. Omettre la ponctuation 
+                        finale.</descriptionPourInfobulle>
+                    <CDATA/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>St-Ambroise, Nelly de</exemple>
+                        <exemple>Alphonse, Thierry</exemple>
+                    </exemplesValeurAttendue>
+                    <commentairesDeModélisation>Même s’il pourrait être plus efficace de séparer le
+                        nom et le prénom, selon l’utilisation prévue dans certains contextes, nous
+                        n’avons pas jugé nécessaire de l’appliquer pour notre
+                        besoin.</commentairesDeModélisation>
+                </attribut>
+                <attribut>
+                    <nom>date-de-création</nom>
+                    <descriptionPourInfobulle>La date de création de la fiche descriptive, sous la forme 
+                        AAAA-MM-JJ.</descriptionPourInfobulle>
+                    <NMTOKEN/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>2020-02-11</exemple>
+                        <exemple>1996-07-04</exemple>
+                    </exemplesValeurAttendue>
+                </attribut>
+                <attribut>
+                    <nom>date-de-dernière-modif</nom>
+                    <descriptionPourInfobulle>La date de dernière modification de la fiche descriptive, 
+                        sous la forme AAAA-MM-JJ.</descriptionPourInfobulle>
+                    <NMTOKEN/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>2018-10-19</exemple>
+                        <exemple>2001-12-13</exemple>
+                    </exemplesValeurAttendue>
+                </attribut>
+                <attribut>
+                    <nom>image</nom>
+                    <descriptionPourInfobulle>Renseigne sur la présence ou l’absence d’une image de la plume d’écriture dans le dossier "images-plumes". "oui" signifie la présence d’une image et "non" l’absence d’une image. La valeur par défaut assignée est "oui". Les fichiers en format JPEG sont nommés selon l’identifiant de la fiche-descriptive (5 chiffres attribués séquentiellement).</descriptionPourInfobulle>
+                    <énuméré>
+                        <valeurPossible>Oui</valeurPossible>
+                        <valeurPossible>Non</valeurPossible>
+                    </énuméré>
+                    <valeurParDéfaut>Oui</valeurParDéfaut>
+                </attribut>
+                <attribut>
+                    <nom>mots-clés</nom>
+                    <descriptionPourInfobulle>Les mots-clés associés à la fiche descriptive séparés par une 
+                        virgule et suivi d’une espace.</descriptionPourInfobulle>
+                    <CDATA/>
+                    <IMPLIED/>
+                    <exemplesValeurAttendue>
+                        <exemple>Première Guerre mondiale, rare, bronze</exemple>
+                        <exemple>XIXe siècle, métal, estampe</exemple>
+                    </exemplesValeurAttendue>
+                </attribut>
+            </attributs>
+        </élément>
+        <élément>
+            <idGen>identification</idGen>
+            <descriptionPourInfobulle>Identification de la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>(nom?, modèle, type, provenance?, contributeurs, commentaires?)</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>nom</idGen>
+            <descriptionPourInfobulle>Le nom de la plume d’écriture. Omettre la ponctuation finale.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Plume Sergent-Major</exemple>
+                <exemple>Plume Bayard Anglaise</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Il peut être étonnant que l’élément nom soit facultatif,
+                mais dans la mesure où il peut arriver que la plume d’écriture n’ait qu’un numéro
+                qui lui soit attribué, sans véritable nom, nous avons jugé pertinent d’effectuer ce
+                choix.</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>modèle</idGen>
+            <descriptionPourInfobulle>Le modèle de plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Sergent-Major</exemple>
+                <exemple>Gauloise</exemple>
+            </exemplesContenuAttendu>
+            <attributs>
+                <attribut>
+                    <nom>version</nom>
+                    <descriptionPourInfobulle>La version de la plume d’écriture.</descriptionPourInfobulle>
+                    <énuméré>
+                        <valeurPossible>Reproduite</valeurPossible>
+                        <valeurPossible>Originale</valeurPossible>
+                    </énuméré>
+                    <valeurParDéfaut>Reproduite</valeurParDéfaut>
+                    <commentairesDeModélisation>L’attribut a été privilégié, afin de pouvoir
+                        bénéficier d’une valeur par défaut, soit "reproduite", car dans la majorité
+                        des cas, les plumes d’écriture sont des
+                        reproductions.</commentairesDeModélisation>
+                </attribut>
+            </attributs>
+        </élément>
+        <élément>
+            <idGen>type</idGen>
+            <descriptionPourInfobulle>Le type de plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>(estampée, embossée, inversée, standard)</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>estampée</idGen>
+            <descriptionPourInfobulle>Type estampée de plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>EMPTY</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>embossée</idGen>
+            <descriptionPourInfobulle>Type embossée de plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>EMPTY</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>inversée</idGen>
+            <descriptionPourInfobulle>Type inversée de plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>EMPTY</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>standard</idGen>
+            <descriptionPourInfobulle>Type standard de plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>EMPTY</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>provenance</idGen>
+            <descriptionPourInfobulle>La provenance géographique de la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>(ville, pays)</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>ville</idGen>
+            <descriptionPourInfobulle>La ville d’origine de la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Birmingham</exemple>
+                <exemple>Londres</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Étant donné que certains noms de villes sont orthographiés
+                sans trait d’union et donc, en plusieurs mots, nous avons défini #PCDATA plutôt que
+                NMTOKEN.</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>pays</idGen>
+            <descriptionPourInfobulle>Le pays d’origine de la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Angleterre</exemple>
+                <exemple>Italie</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Étant donné que certains noms de pays sont orthographiés
+                sans trait d’union et donc, en plusieurs mots, nous avons défini #PCDATA plutôt que
+                NMTOKEN.</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>contributeurs</idGen>
+            <descriptionPourInfobulle>Les personnes ayant contribuées à la conception, fabrication et 
+                édition de la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>(concepteur, fabricant, éditeur)*</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Parson, John</exemple>
+                <exemple>Chouinard, Martin</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>concepteur</idGen>
+            <descriptionPourInfobulle>Le nom du concepteur de la plume d’écriture, sous la forme Nom, 
+                Prénom et Nom, Prénom Particule s’il y a une particule. Omettre la ponctuation 
+                finale.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Lafréchette, Jean Marie</exemple>
+                <exemple>Holiday, Gustave</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Même s’il pourrait être plus efficace de séparer le nom et
+                le prénom, selon l’utilisation prévue dans certains contextes, nous n’avons pas jugé
+                nécessaire de l’appliquer pour notre besoin.</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>fabricant</idGen>
+            <descriptionPourInfobulle>Le nom du fabricant de la plume d’écriture, sous la forme Nom, 
+                Prénom et Nom, Prénom Particule s’il y a une particule. Omettre la ponctuation 
+                finale.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Parson, John</exemple>
+                <exemple>Chouinard, Martin</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Même s’il pourrait être plus efficace de séparer le nom et
+                le prénom, selon l’utilisation prévue dans certains contextes, nous n’avons pas jugé
+                nécessaire de l’appliquer pour notre besoin.</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>éditeur</idGen>
+            <descriptionPourInfobulle>Le nom de l’éditeur de la plume d’écriture, sous la forme Nom, 
+                Prénom et Nom, Prénom Particule s’il y a une particule. Omettre la ponctuation 
+                finale.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Arendht, Émile</exemple>
+                <exemple>Santiago, Lussia</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Même s’il pourrait être plus efficace de séparer le nom et
+                le prénom, selon l’utilisation prévue dans certains contextes, nous n’avons pas jugé
+                nécessaire de l’appliquer pour notre besoin.</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>commentaires</idGen>
+            <descriptionPourInfobulle>Commentaires généraux pouvant être utiles ou pertinents d’être 
+                ajoutés concernant l’identification de la plume d’écriture. Mettre un signe de ponctuation 
+                final.</descriptionPourInfobulle>
+            <modèleContenuXML>(para+)</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>para</idGen>
+            <descriptionPourInfobulle>Un paragraphe de commentaires généraux pouvant contenir des mises en 
+                emphase (&lt;em>)et/ou des liens (&lt;lien>) vers d’autres objets de la 
+                collection.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA | em | lien)*</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>On dit que son concepteur a eu l’idée de son design par son &lt;em>propre 
+                    concurrent&lt;/em> !</exemple>
+                <exemple>Si cette plume d’écriture a été fabriquée en Italie, il reste qu’elle fut 
+                    fabriquée pour être commercialisée en Amérique du Nord.</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>em</idGen>
+            <descriptionPourInfobulle>Mise en emphase d’un mot ou de plusieurs mots dans la zone de 
+                commentaires généraux.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA | lien)*</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Il en a fallu de peu pour que cette plume d’écriture ne soit &lt;em>jamais&lt;/em> 
+                    connue !</exemple>
+                <exemple>La plume d’écriture surnommée&lt;lien id= "00329">La Maudite&lt;/lien> ressemble 
+                    drôlement à celle-ci.</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>lien</idGen>
+            <descriptionPourInfobulle>Lien servant de renvoi à d’autres objets de la collection dans la 
+                zone de commentaires généraux.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>La Maudite</exemple>
+                <exemple>Sergent-Major</exemple>
+            </exemplesContenuAttendu>
+            <attributs>
+                <attribut>
+                    <nom>id</nom>
+                    <descriptionPourInfobulle>Identifiant de la fiche descriptive attribué séquentiellement 
+                        et composé de 5 chiffres, sous la forme 00000 à laquelle le lien renvoie.</descriptionPourInfobulle>
+                    <NMTOKEN/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>00013</exemple>
+                        <exemple>02811</exemple>
+                    </exemplesValeurAttendue>
+                </attribut>
+            </attributs>
+        </élément>
+        <élément>
+            <idGen>aspect-historique</idGen>
+            <descriptionPourInfobulle>Aspect historique de la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>(appellation-d-origine, personnage-historique*, contexte-d-utilisation*, note-historique?)</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>appellation-d-origine</idGen>
+            <descriptionPourInfobulle>Appellation d’origine de la plume d’écriture. Omettre la ponctuation 
+                finale.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>La Maudite</exemple>
+                <exemple>Sergent-Major</exemple>
+            </exemplesContenuAttendu>
+            <attributs>
+                <attribut>
+                    <nom>numéro-d-origine</nom>
+                    <descriptionPourInfobulle>Le numéro d’origine de la plume d’écriture, composé d’une 
+                        séquence de chiffres et pouvant comprendre des lettres majuscules. Ne pas transcrire 
+                        les marqueurs de ponctuation.</descriptionPourInfobulle>
+                    <NMTOKEN/>
+                    <IMPLIED/>
+                    <exemplesValeurAttendue>
+                        <exemple>728</exemple>
+                        <exemple>190F</exemple>
+                    </exemplesValeurAttendue>
+                </attribut>
+                <attribut>
+                    <nom>période-historique</nom>
+                    <descriptionPourInfobulle>La période historique associée à la plume d’écriture.</descriptionPourInfobulle>
+                    <énuméré>
+                        <valeurPossible>18e siècle et avant</valeurPossible>
+                        <valeurPossible>19e siècle</valeurPossible>
+                        <valeurPossible>1900-1980</valeurPossible>
+                        <valeurPossible>1980 et après</valeurPossible>
+                    </énuméré>
+                    <valeurParDéfaut>19e siècle</valeurParDéfaut>
+                    <commentairesDeModélisation>Ces périodes ont été définies en fonction de la
+                        durée de vie commerciale des plumes d’écriture. De plus, nous avons
+                        privilégié l’attribut, afin d’être en mesure de définir une valeur par
+                        défaut.</commentairesDeModélisation>
+                </attribut>
+                <attribut>
+                    <nom>rareté</nom>
+                    <descriptionPourInfobulle>La rareté de la plume d’écriture : "oui" signifie qu’elle n’est 
+                        pas courante et "non" signifie qu’elle est courante.</descriptionPourInfobulle>
+                    <énuméré>
+                        <valeurPossible>Oui</valeurPossible>
+                        <valeurPossible>Non</valeurPossible>
+                    </énuméré>
+                    <valeurParDéfaut>Non</valeurParDéfaut>
+                </attribut>
+            </attributs>
+        </élément>
+        <élément>
+            <idGen>personnage-historique</idGen>
+            <descriptionPourInfobulle>Le nom de personnage historique auquel la plume 
+                d’écriture a appartenu et/ou qui l’a utilisée, sous la forme Prénom, Nom. Transcrire 
+                l’appellation courante de la personne et omettre la ponctuation 
+                finale.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Reine Victoria</exemple>
+                <exemple>Jeanne d’Arc</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Même s’il pourrait être plus efficace de séparer le nom et
+                le prénom, selon l’utilisation prévue dans certains contextes, nous n’avons pas jugé
+                nécessaire de l’appliquer pour notre besoin.</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>contexte-d-utilisation</idGen>
+            <descriptionPourInfobulle>Le contexte d’utilisation originel de la plume d’écriture. Omettre la 
+                ponctuation finale.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Écriture gothique</exemple>
+                <exemple>Utilisation de ce modèle en contexte scolaire</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>note-historique</idGen>
+            <descriptionPourInfobulle>Commentaires généraux pouvant être utiles ou pertinents d’être 
+                ajoutés concernant l’aspect historique de la plume d’écriture. Mettre un signe de 
+                ponctuation final.</descriptionPourInfobulle>
+            <modèleContenuXML>(para+)</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>para</idGen>
+            <descriptionPourInfobulle>Un paragraphe de commentaires généraux pouvant contenir des mises en 
+                emphase (&lt;em>)et/ou des liens (&lt;lien>) vers d’autres objets de la 
+                collection.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA | em | lien)*</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>La très grande utilisation par les écoliers de la plume d’écriture Sergent-Major est 
+                    due, en grande partie, à la volonté d’honorer la mémoire des &lt;em>braves&lt;/em> soldats 
+                    ayant combattus durant la guerre de 1870.</exemple>
+                <exemple>L’appellation d’origine de cette plume d’écriture a été fortement influencée par la 
+                    montée du colonialisme.</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>em</idGen>
+            <descriptionPourInfobulle>Mise en emphase d’un mot ou de plusieurs mots dans la zone de 
+                commentaires généraux.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA | lien)*</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Il en a fallu de peu pour que cette plume d’écriture ne soit &lt;em>jamais&lt;/em> 
+                    connue !</exemple>
+                <exemple>La plume d’écriture surnommée&lt;lien id= "00329">La Maudite&lt;/lien> ressemble 
+                    drôlement à celle-ci.</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>lien</idGen>
+            <descriptionPourInfobulle>Lien servant de renvoi à d’autres objets de la collection dans la 
+                zone de commentaires généraux.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>La Maudite</exemple>
+                <exemple>Sergent-Major</exemple>
+            </exemplesContenuAttendu>
+            <attributs>
+                <attribut>
+                    <nom>id</nom>
+                    <descriptionPourInfobulle>Identifiant de la fiche descriptive attribué séquentiellement 
+                        et composé de 5 chiffres, sous la forme 00000 à laquelle le lien renvoie.</descriptionPourInfobulle>
+                    <NMTOKEN/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>00013</exemple>
+                        <exemple>02811</exemple>
+                    </exemplesValeurAttendue>
+                </attribut>
+            </attributs>
+        </élément>
+        <élément>
+            <idGen>aspect-physique</idGen>
+            <descriptionPourInfobulle>L’aspect physique de la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>(matériau, état, couleur+, inscription*, particularité*, commentaires?)</modèleContenuXML>
+            <attributs>
+                <attribut>
+                    <nom>longueur</nom>
+                    <descriptionPourInfobulle>La longueur de la plume d’écriture, exprimée en mm.</descriptionPourInfobulle>
+                    <NMTOKEN/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>38</exemple>
+                        <exemple>90</exemple>
+                    </exemplesValeurAttendue>
+                    <commentairesDeModélisation>Nous avons privilégié l’attribut, afin d’offrir un
+                        contrôle de contenu par une valeur attendue de type
+                        NMTOKEN.</commentairesDeModélisation>
+                </attribut>
+                <attribut>
+                    <nom>taille-de-la-pointe</nom>
+                    <descriptionPourInfobulle>La taille de la pointe de la plume d’écriture.</descriptionPourInfobulle>
+                    <énuméré>
+                        <valeurPossible>extra fine</valeurPossible>
+                        <valeurPossible>fine</valeurPossible>
+                        <valeurPossible>moyenne</valeurPossible>
+                        <valeurPossible>grosse</valeurPossible>
+                    </énuméré>
+                    <valeurParDéfaut>fine</valeurParDéfaut>
+                    <commentairesDeModélisation>Nous avons privilégié l’attribut, afin d’être en
+                        mesure de définir une valeur par défaut ; la taille fine étant la plus
+                        courante.</commentairesDeModélisation>
+                </attribut>
+            </attributs>
+        </élément>
+        <élément>
+            <idGen>matériau</idGen>
+            <descriptionPourInfobulle>Le matériau dominant dans lequel la plume d’écriture a été forgée.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>métal</exemple>
+                <exemple>laiton</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>état</idGen>
+            <descriptionPourInfobulle>L’état dans lequel se trouve la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>(neuf | en-bon-état | faiblement-endommagé | en-mauvais-état)</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>neuf</idGen>
+            <descriptionPourInfobulle>L’état jugé neuf dans lequel se trouve la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>EMPTY</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>en-bon-état</idGen>
+            <descriptionPourInfobulle>L’état jugé en bon état dans lequel se trouve la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>EMPTY</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>faiblement-endommagé</idGen>
+            <descriptionPourInfobulle>L’état jugé faiblement endommagé dans lequel se trouve la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>EMPTY</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>en-mauvais-état</idGen>
+            <descriptionPourInfobulle>L’état jugé en mauvais état dans lequel se trouve la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>EMPTY</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>couleur</idGen>
+            <descriptionPourInfobulle>La couleur de la plume d'écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>inscription</idGen>
+            <descriptionPourInfobulle>Toute inscription (dessins, contenu textuel, etc.) figurant sur la plume d’écriture.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>feuille de vigne</exemple>
+                <exemple>Italia</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>particularité</idGen>
+            <descriptionPourInfobulle>La particularité concernant les caractéristiques physiques de la plume d’écriture. Omettre la ponctuation finale.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>bec courbé</exemple>
+                <exemple>forme atypique</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>commentaires</idGen>
+            <descriptionPourInfobulle>Commentaires généraux pouvant être utiles ou pertinents d’être ajoutés concernant l’aspect physique de la plume d’écriture. Mettre un signe de ponctuation final.</descriptionPourInfobulle>
+            <modèleContenuXML>(para+)</modèleContenuXML>
+        </élément>
+        <élément>
+            <idGen>para</idGen>
+            <descriptionPourInfobulle>Un paragraphe de commentaires généraux pouvant contenir des mises en emphase et/ou des liens vers d’autres objets de la collection.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA | em | lien)*</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>On dit que son concepteur a eu l’idée de son design par son &lt;em>propre concurrent&lt;/em> !</exemple>
+                <exemple>Présence de petites tâches de rouille sur le bec.</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>em</idGen>
+            <descriptionPourInfobulle>Mise en emphase d’un mot ou de plusieurs mots dans la zone de commentaires généraux.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA | lien)*</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Comparativement aux modèles semblables, cette plume d’écriture est &lt;em>étrangement&lt;/em> plus petite.</exemple>
+                <exemple>La fleur gravée sur cette plume d’écriture rappelle celle figurant sur &lt;lien id="01457">La Bolduc&lt;/lien>.</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>lien</idGen>
+            <descriptionPourInfobulle>Lien servant de renvoi à d’autres objets de la collection dans la zone de commentaires généraux.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>La Maudite</exemple>
+                <exemple>Sergent-Major</exemple>
+            </exemplesContenuAttendu>
+            <attributs>
+                <attribut>
+                    <nom>id</nom>
+                    <descriptionPourInfobulle>Identifiant de la fiche descriptive attribué séquentiellement et composé de 5 chiffres, sous la forme 00000 à laquelle le lien renvoie.</descriptionPourInfobulle>
+                    <NMTOKEN/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>28140</exemple>
+                        <exemple>44029</exemple>
+                    </exemplesValeurAttendue>
+                </attribut>
+            </attributs>
+        </élément>
+    </éléments>
+</modèleXML3011>

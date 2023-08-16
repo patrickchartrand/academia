@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="tp3q5_livres.xsl"?>
+<livres>
+    <livre langue="anglais">
+        <!--  Ceci est un commentaire pour le livre XMLSPY  -->
+        <titre>The official XMLSPY handbook</titre>
+        <auteurs>
+            <auteur>
+                <nom>Kim</nom>
+                <prenom>Larry</prenom>
+                <initiales/>
+            </auteur>
+            <auteur>
+                <nom>Ami</nom>
+                <prenom>Son</prenom>
+                <initiales>Bon</initiales>
+            </auteur>
+        </auteurs>
+        <edition>Wiley</edition>
+        <isbn>0-7645-4964-2</isbn>
+        <cd_inclus>oui</cd_inclus>
+        <image src="xmlspy.jpg"/>
+        <contenu>bla bla bla</contenu>
+    </livre>
+    <livre langue="francais">
+        <titre>XML</titre>
+        <auteurs>
+            <auteur>
+                <nom>Marchand</nom>
+                <prenom>Benoit</prenom>
+                <initiales/>
+            </auteur>
+        </auteurs>
+        <edition>CampusPress</edition>
+        <isbn>2-7440-0924-5</isbn>
+        <cd_inclus>non</cd_inclus>
+        <image src="xml.jpg"/>
+        <contenu>encore du bla bla</contenu>
+    </livre>
+    <livre langue="anglais">
+        <!--  Ceci est un commentaire  -->
+        <titre>Microsoft FrontPage au quotidien</titre>
+        <auteurs>
+            <auteur>
+                <nom>Buyens</nom>
+                <prenom>Jim</prenom>
+                <initiales/>
+            </auteur>
+        </auteurs>
+        <edition>Microsoft Press</edition>
+        <isbn>0-2315-4964-2</isbn>
+        <cd_inclus>oui</cd_inclus>
+        <image src="frontpage.jpg"/>
+        <contenu>bla bla bla</contenu>
+    </livre>
+    <livre langue="anglais">
+        <!--  Ceci est un commentaire  -->
+        <titre>Creating Web Pages with HTML</titre>
+        <auteurs>
+            <auteur>
+                <nom>Carey</nom>
+                <prenom>Patrick</prenom>
+                <initiales/>
+            </auteur>
+        </auteurs>
+        <edition>Course Technology - ITP</edition>
+        <isbn>0-2395-9642-2</isbn>
+        <cd_inclus>oui</cd_inclus>
+        <image src="web.jpg"/>
+        <contenu>bla bla bla</contenu>
+    </livre>
+    <livre langue="francais">
+        <!--  Ceci est un commentaire  -->
+        <titre>Creer sa page Web</titre>
+        <auteurs>
+            <auteur>
+                <nom>Dreyfus</nom>
+                <prenom>Michel</prenom>
+                <initiales/>
+            </auteur>
+        </auteurs>
+        <edition>CampusPress</edition>
+        <isbn>0-6752-9432-1</isbn>
+        <cd_inclus>oui</cd_inclus>
+        <image src="dreyfus.jpg"/>
+        <contenu>bla bla bla</contenu>
+    </livre>
+    <livre langue="francais">
+        <!--  Ceci est un commentaire  -->
+        <titre>Creer des sites Web</titre>
+        <auteurs>
+            <auteur>
+                <nom>Muller</nom>
+                <prenom>Peter</prenom>
+                <initiales/>
+            </auteur>
+        </auteurs>
+        <edition>Micro application</edition>
+        <isbn>0-6752-0232-1</isbn>
+        <cd_inclus>non</cd_inclus>
+        <image src="sites.jpg"/>
+        <contenu>bla bla bla</contenu>
+    </livre>
+    <livre langue="francais">
+        <!--  Ceci est un commentaire  -->
+        <titre>JavaScript par la pratique</titre>
+        <auteurs>
+            <auteur>
+                <nom>Thau</nom>
+                <prenom>David</prenom>
+                <initiales/>
+            </auteur>
+            <auteur>
+                <nom>Bob</nom>
+                <prenom>Bob</prenom>
+                <initiales/>
+            </auteur>
+            <auteur>
+                <nom>Ami</nom>
+                <prenom>Son</prenom>
+                <initiales>Bon</initiales>
+            </auteur>
+        </auteurs>
+        <edition>Eyrolles</edition>
+        <isbn>0-4445-0459-1</isbn>
+        <cd_inclus>oui</cd_inclus>
+        <image src="js.jpg"/>
+        <contenu>bla bla bla</contenu>
+    </livre>
+    <livre langue="anglais">
+        <!--  Ceci est un commentaire  -->
+        <titre>How to setup and maintain a Web site</titre>
+        <auteurs>
+            <auteur>
+                <nom>Stein</nom>
+                <prenom>Lincoln</prenom>
+                <initiales>D.</initiales>
+            </auteur>
+        </auteurs>
+        <edition>Addison Wesley</edition>
+        <isbn>0-9851-0232-1</isbn>
+        <cd_inclus>non</cd_inclus>
+        <image src="general.jpg"/>
+        <contenu>bla bla bla</contenu>
+    </livre>
+    <livre langue="anglais">
+        <!--  Ceci est un commentaire  -->
+        <titre>
+            Teach Yourself Web Publishing with HTML 4.01 in 14 days
+        </titre>
+        <auteurs>
+            <auteur>
+                <nom>Lemay</nom>
+                <prenom>Laura</prenom>
+                <initiales/>
+            </auteur>
+        </auteurs>
+        <edition>Sams.net</edition>
+        <isbn>0-3225-0232-1</isbn>
+        <cd_inclus>non</cd_inclus>
+        <image src="general.jpg"/>
+        <contenu>bla bla bla</contenu>
+    </livre>
+    <livre langue="anglais">
+        <!--  Ceci est un commentaire  -->
+        <titre>JavaScript Interactive Course</titre>
+        <auteurs>
+            <auteur>
+                <nom>Danesh</nom>
+                <prenom>Arman</prenom>
+                <initiales/>
+            </auteur>
+        </auteurs>
+        <edition>Waite Group Press</edition>
+        <isbn>0-1095-0232-1</isbn>
+        <cd_inclus>oui</cd_inclus>
+        <image src="jsi.jpg"/>
+        <contenu>bla bla bla</contenu>
+    </livre>
+    <livre langue="anglais">
+        <!--  Ceci est un commentaire  -->
+        <titre>JavaScript - The Definitive Guide</titre>
+        <auteurs>
+            <auteur>
+                <nom>Flanagan</nom>
+                <prenom>David</prenom>
+                <initiales/>
+            </auteur>
+        </auteurs>
+        <edition>O'Reilly</edition>
+        <isbn>0-9995-0299-1</isbn>
+        <cd_inclus>non</cd_inclus>
+        <image src="general.jpg"/>
+        <contenu>bla bla bla</contenu>
+    </livre>
+    <livre langue="anglais">
+        <!--  Ceci est un commentaire  -->
+        <titre>
+            The Complete Internet &amp; World Wide Web Programming Training Course
+        </titre>
+        <auteurs>
+            <auteur>
+                <nom>Deitel</nom>
+                <prenom>D.</prenom>
+                <initiales/>
+            </auteur>
+            <auteur>
+                <nom>Deitel</nom>
+                <prenom>H.</prenom>
+                <initiales/>
+            </auteur>
+            <auteur>
+                <nom>Nieto</nom>
+                <prenom>J.</prenom>
+                <initiales/>
+            </auteur>
+        </auteurs>
+        <edition>Prentice Hall</edition>
+        <isbn>0-1115-0299-1</isbn>
+        <cd_inclus>non</cd_inclus>
+        <image src="www.jpg"/>
+        <contenu>bla bla bla</contenu>
+    </livre>
+    <livre langue="anglais">
+        <!--  Ceci est un commentaire  -->
+        <titre>Managing &amp; Using MySQL</titre>
+        <auteurs>
+            <auteur>
+                <nom>Reese</nom>
+                <prenom>D.</prenom>
+                <initiales/>
+            </auteur>
+            <auteur>
+                <nom>Yarger </nom>
+                <prenom>Y.</prenom>
+                <initiales/>
+            </auteur>
+            <auteur>
+                <nom>King</nom>
+                <prenom>Le</prenom>
+                <initiales/>
+            </auteur>
+        </auteurs>
+        <edition>O'Reilly</edition>
+        <isbn>0-1235-1299-1</isbn>
+        <cd_inclus>oui</cd_inclus>
+        <image src="mysql.jpg"/>
+        <contenu>bla bla bla</contenu>
+    </livre>
+</livres>
